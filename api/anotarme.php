@@ -4,12 +4,12 @@ header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); echo '{"ok":false}'; exit; }
 
-$cfg = @include dirname(__DIR__, 2) . '/egv-privado/config.php';   // fuera de public_html
+$cfg = @include dirname(__DIR__) . '/egv-privado/config.php';   // carpeta bloqueada por .htaccess
 if (!is_array($cfg)) $cfg = [];
 $MAIL_TO   = $cfg['mail_to']   ?? 'contacto@elgranviajecito.com';
 $WA_PHONE  = $cfg['wa_phone']  ?? '';   // ej. 59899244227
 $WA_APIKEY = $cfg['wa_apikey'] ?? '';   // apikey de CallMeBot
-$DATA_DIR  = dirname(__DIR__, 2) . '/egv-privado';
+$DATA_DIR  = dirname(__DIR__) . '/egv-privado';
 
 $in = json_decode(file_get_contents('php://input'), true) ?: $_POST;
 $clean = function ($v, $max) { $v = trim(strip_tags((string)$v)); $v = preg_replace('/[\r\n\t]+/', ' ', $v); return mb_substr($v, 0, $max); };
