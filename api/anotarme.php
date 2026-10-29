@@ -43,13 +43,21 @@ if ($fh = @fopen($csv, 'a')) {
   fclose($fh);
 }
 
-// 2) mail a contacto@
-$asunto = '=?UTF-8?B?' . base64_encode('Nuevo anotado viajecitos 2027 · ' . $nombre) . '?=';
+// 2) mail a contacto@ (por SMTP con el buzón, así no cae en spam; si no hay contraseña, usa mail())
+$asunto = 'Nuevo anotado viajecitos 2027 · ' . $nombre;
 $cuerpo = "Se anotó alguien en la pantalla de entrada de elgranviajecito.com\n\n"
         . "Nombre: $nombre\nPaís: $pais\nWhatsApp: $wa\nMail: $mail\nFecha: $fecha\n\n"
         . "WhatsApp directo: https://wa.me/" . preg_replace('/\D/', '', $wa) . "\n";
-$headers = "From: El Gran Viajecito <contacto@elgranviajecito.com>\r\nReply-To: $mail\r\nContent-Type: text/plain; charset=UTF-8\r\n";
-@mail($MAIL_TO, $asunto, $cuerpo, $headers, '-fcontacto@elgranviajecito.com');
+$SMTP_USER = $cfg['smtp_user'] ?? 'contacto@elgranviajecito.com';
+$SMTP_PASS = $cfg['smtp_pass'] ?? '';
+$enviado = false;
+if ($SMTP_PASS !== '' && $SMTP_PASS !== 'PEGAR_ACA_LA_CONTRASEÑA') {
+  $enviado = egv_smtp($SMTP_USER, $SMTP_PASS, $MAIL_TO, $mail, $asunto, $cuerpo);
+}
+if (!$enviado) {
+  $headers = "From: El Gran Viajecito <contacto@elgranviajecito.com>\r\nReply-To: $mail\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+  @mail($MAIL_TO, '=?UTF-8?B?' . base64_encode($asunto) . '?=', $cuerpo, $headers, '-fcontacto@elgranviajecito.com');
+}
 
 // 3) WhatsApp al número de El Gran Viajecito (CallMeBot)
 if ($WA_PHONE !== '' && $WA_APIKEY !== '') {
@@ -60,3 +68,26 @@ if ($WA_PHONE !== '' && $WA_APIKEY !== '') {
 }
 
 echo '{"ok":true}';
+
+function egv_smtp($user, $pass, $to, $replyTo, $subject, $body) {
+  $fp = @stream_socket_client('ssl://smtp.hostinger.com:465', $errno, $errstr, 10);
+  if (!$fp) return false;
+  stream_set_timeout($fp, 10);
+  $read = function () use ($fp) { $out = ''; while (($l = fgets($fp, 515)) !== false) { $out .= $l; if (isset($l[3]) && $l[3] === ' ') break; } return $out; };
+  $cmd = function ($c, $ok) use ($fp, $read) { fwrite($fp, $c . "\r\n"); $r = $read(); return strpos($r, (string)$ok) === 0; };
+  $read();
+  $host = 'elgranviajecito.com';
+  $ok = $cmd("EHLO $host", 250) && $cmd('AUTH LOGIN', 334) && $cmd(base64_encode($user), 334) && $cmd(base64_encode($pass), 235)
+     && $cmd("MAIL FROM:<$user>", 250) && $cmd("RCPT TO:<$to>", 250) && $cmd('DATA', 354);
+  if ($ok) {
+    $h = 'Date: ' . date('r') . "\r\n"
+       . 'Message-ID: <' . bin2hex(random_bytes(12)) . "@$host>\r\n"
+       . "From: El Gran Viajecito <$user>\r\nTo: <$to>\r\nReply-To: <$replyTo>\r\n"
+       . 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n"
+       . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
+       . chunk_split(base64_encode($body));
+    $ok = $cmd($h . "\r\n.", 250);
+  }
+  @fwrite($fp, "QUIT\r\n"); @fclose($fp);
+  return $ok;
+}
