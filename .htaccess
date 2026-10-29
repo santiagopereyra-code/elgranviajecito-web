@@ -1,0 +1,91 @@
+# El Gran Viajecito · Hostinger (Apache/LiteSpeed)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# HTTPS y sin www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://elgranviajecito.com/$1 [R=301,L]
+# URLs viejas del WordPress con destino exacto
+RewriteRule ^2020/01/22/6\-lugares\-que\-ver\-en\-manila/?$ /guias/filipinas/que-ver-en-manila/ [R=301,L]
+RewriteRule ^2020/01/22/que\-ver\-en\-la\-ciudad\-de\-amritsar/?$ /guias/india/que-ver-en-amritsar/ [R=301,L]
+RewriteRule ^2020/01/23/7\-cosas\-que\-hacer\-en\-ubud/?$ /guias/indonesia/que-hacer-en-ubud/ [R=301,L]
+RewriteRule ^2020/01/30/7\-cosas\-que\-hacer\-en\-el\-nido/?$ /guias/filipinas/que-hacer-en-el-nido/ [R=301,L]
+RewriteRule ^2020/02/03/12\-lugares\-que\-ver\-en\-singapur/?$ /guias/singapur/que-ver-en-singapur/ [R=301,L]
+RewriteRule ^2020/02/04/7\-actividades\-que\-realizar\-en\-rishikesh/?$ /guias/india/que-hacer-en-rishikesh/ [R=301,L]
+RewriteRule ^2020/02/08/que\-ver\-en\-el\-sur\-de\-bali/?$ /guias/indonesia/que-ver-en-el-sur-de-bali/ [R=301,L]
+RewriteRule ^2020/02/11/7\-lugares\-que\-ver\-en\-la\-isla\-de\-bohol/?$ /guias/filipinas/que-ver-en-bohol/ [R=301,L]
+RewriteRule ^2020/02/20/viaje\-en\-barco\-flores\-lombok/?$ /guias/indonesia/barco-de-flores-a-lombok/ [R=301,L]
+RewriteRule ^2020/02/22/que\-hacer\-en\-port\-barton/?$ /guias/filipinas/que-hacer-en-port-barton/ [R=301,L]
+RewriteRule ^2020/03/05/7\-cosas\-que\-hacer\-en\-las\-islas\-gili/?$ /guias/indonesia/que-hacer-en-las-islas-gili/ [R=301,L]
+RewriteRule ^2020/03/05/que\-hacer\-en\-kuala\-lumpur/?$ /guias/malasia/que-hacer-en-kuala-lumpur/ [R=301,L]
+RewriteRule ^2020/03/06/7\-cosas\-que\-hacer\-en\-siargao/?$ /guias/filipinas/que-hacer-en-siargao/ [R=301,L]
+RewriteRule ^2020/05/20/templos\-que\-ver\-en\-bali/?$ /guias/indonesia/templos-de-bali/ [R=301,L]
+RewriteRule ^2020/07/07/que\-hacer\-en\-las\-islas\-phi\-phi/?$ /guias/tailandia/que-hacer-en-las-islas-phi-phi/ [R=301,L]
+RewriteRule ^2020/07/11/que\-hacer\-en\-bangkok/?$ /guias/tailandia/que-hacer-en-bangkok/ [R=301,L]
+RewriteRule ^2020/07/16/que\-hacer\-en\-jaipur/?$ /guias/india/que-ver-en-jaipur/ [R=301,L]
+RewriteRule ^2020/07/29/queverenangkorwat/?$ /guias/camboya/que-ver-en-angkor-wat/ [R=301,L]
+RewriteRule ^2020/08/07/que\-hacer\-en\-chiang\-mai/?$ /guias/tailandia/que-hacer-en-chiang-mai/ [R=301,L]
+RewriteRule ^2020/10/17/historia\-del\-taj\-mahal/?$ /guias/india/historia-del-taj-mahal/ [R=301,L]
+RewriteRule ^2021/01/03/que\-hacer\-en\-varanasi/?$ /guias/india/que-hacer-en-varanasi/ [R=301,L]
+RewriteRule ^2021/01/09/7\-lugares\-que\-conocer\-en\-dharamshala/?$ /guias/india/que-ver-en-dharamshala/ [R=301,L]
+RewriteRule ^2023/09/12/13\-tipos\-de\-viajeros/?$ /viajar-solo-en-grupo/ [R=301,L]
+RewriteRule ^tours/egipto\-total/?$ /viajes/egipto/ [R=301,L]
+RewriteRule ^tours/filipinas\-y\-vietnam/?$ /viajes/filipinas-vietnam/ [R=301,L]
+RewriteRule ^tours/viaje\-en\-grupo\-a\-india/?$ /viajes/india-nepal/ [R=301,L]
+RewriteRule ^tours/viaje\-en\-grupo\-a\-indonesia\-malasia\-singapur/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
+RewriteRule ^tours/viaje\-en\-grupo\-a\-japon/?$ /viajes/japon/ [R=301,L]
+RewriteRule ^tours/viaje\-en\-grupo\-tailandia\-y\-camboya/?$ /viajes/tailandia-camboya/ [R=301,L]
+RewriteRule ^tours/viaje\-en\-grupo\-tanzania\-y\-zanzibar/?$ /viajes/tanzania-zanzibar/ [R=301,L]
+RewriteRule ^tours/costa\-rica\-selva\-playa/?$ /viajes/ [R=301,L]
+RewriteRule ^tours/?$ /viajes/ [R=301,L]
+RewriteRule ^como\-son\-los\-viajes\-en\-grupo/?$ /como-viajamos/ [R=301,L]
+RewriteRule ^politica\-privacidad/?$ /privacidad/ [R=301,L]
+RewriteRule ^viajecitos/?$ /opiniones/ [R=301,L]
+RewriteRule ^blog\-de\-viajecitos/?$ /guias/ [R=301,L]
+RewriteRule ^visas/?$ /como-funciona/ [R=301,L]
+RewriteRule ^tour_destination/japon/?$ /viajes/japon/ [R=301,L]
+RewriteRule ^tour_destination/tanzania/?$ /viajes/tanzania-zanzibar/ [R=301,L]
+RewriteRule ^tour_destination/zanzibar/?$ /viajes/tanzania-zanzibar/ [R=301,L]
+RewriteRule ^tour_destination/india/?$ /viajes/india-nepal/ [R=301,L]
+RewriteRule ^tour_destination/bali/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
+RewriteRule ^tour_destination/indonesia/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
+RewriteRule ^tour_destination/indonesia\-2/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
+RewriteRule ^tour_destination/tailandia\-camboya/?$ /viajes/tailandia-camboya/ [R=301,L]
+# resto de URLs viejas (etiquetas, categorías, tienda): a la sección más cercana
+RewriteRule ^(tag|blog|category)(/.*)?$ /guias/ [R=301,L]
+RewriteRule ^(tour_tag|tour_category|tour_destination|tour_includes|etiqueta-producto|categoria-producto|tour-single|tienda|micarrito|reservaconfirmada)(/.*)?$ /viajes/ [R=301,L]
+RewriteRule ^(footer|informacion)(/.*)?$ / [R=301,L]
+RewriteRule ^(wp-admin|wp-login\.php|wp-content|wp-includes|wp-json|xmlrpc\.php).*$ / [R=301,L]
+# sin barra final -> con barra
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[a-z0-9]{2,12}$ [NC]
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(webp|jpg|jpeg|png|ico|mp4)$">
+Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+<FilesMatch "\.(css|js|json|webmanifest)$">
+Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+<FilesMatch "\.(html|xml|txt)$">
+Header set Cache-Control "public, max-age=600"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/plain application/xml application/manifest+json
+</IfModule>
+AddType image/webp .webp
+AddType application/manifest+json .webmanifest
