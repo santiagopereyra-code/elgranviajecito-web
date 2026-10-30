@@ -94,6 +94,14 @@ h1 em{font-style:inherit;color:var(--ink);background:var(--lime);padding:0 .14em
   border:1px solid #2E2634;box-shadow:0 0 0 8px #120E15,0 0 0 9px #2A2231,0 40px 90px -30px rgba(229,0,125,.45),0 20px 60px -20px rgba(200,255,62,.25);transform:rotate(2deg)}
 @media (min-width:920px){.phone{height:100%;width:auto}}
 .phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.endcta{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;
+  background:linear-gradient(180deg,rgba(10,7,12,.55),rgba(10,7,12,.92));opacity:0;transition:opacity .4s ease}
+.endcta.on{opacity:1}
+.endcta p{margin:0;font:800 italic clamp(1.5rem,7vw,2rem)/.98 var(--display);text-transform:uppercase;color:#fff;text-wrap:balance}
+.endcta p em{font-style:inherit;color:var(--lime)}
+.endcta .btn{min-height:52px;font-size:1.15rem;padding:0 20px}
+.endcta .again{appearance:none;border:0;background:none;color:#E6E0EA;font:600 .9rem/1 var(--body);text-decoration:underline;cursor:pointer;padding:8px}
+@media (min-width:920px){.endcta{display:none!important}}
 .snd{position:absolute;right:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;border-radius:999px;
   padding:9px 14px 9px 11px;font:600 .85rem/1 var(--body);color:var(--ink);background:var(--lime);box-shadow:0 6px 20px -6px rgba(0,0,0,.6)}
 .snd svg{width:18px;height:18px}
@@ -208,6 +216,11 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
     <span class="tag" aria-hidden="true">We are back</span>
     <div class="phone">
       <video id="v" src="/video/we-are-back.mp4" poster="/video/we-are-back.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <div class="endcta" id="endcta" hidden>
+        <p>Pocos cupos disponibles. <em>Anotate y no te quedes afuera</em></p>
+        <button class="btn" type="button" id="endcta-go">Quiero ser de los primeros</button>
+        <button class="again" type="button" id="endcta-again">Ver el video de nuevo</button>
+      </div>
       <button class="snd" id="snd" type="button" aria-pressed="false">
         <svg id="snd-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg>
         <span id="snd-t">Activar sonido</span>
@@ -229,6 +242,12 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
   var LIVE=/(^|\.)elgranviajecito\.com$/.test(location.hostname);
   // sonido
   var v=document.getElementById('v'),b=document.getElementById('snd'),t=document.getElementById('snd-t'),ic=document.getElementById('snd-i');
+  // celular: al terminar el video aparece el CTA (en compu sigue en loop)
+  var mq=window.matchMedia('(max-width:919px)'),ec=document.getElementById('endcta');
+  function setLoop(){v.loop=!mq.matches;}setLoop();if(mq.addEventListener)mq.addEventListener('change',setLoop);
+  v.addEventListener('ended',function(){if(!mq.matches)return;ec.hidden=false;requestAnimationFrame(function(){ec.classList.add('on');});b.hidden=true;});
+  document.getElementById('endcta-again').addEventListener('click',function(){ec.classList.remove('on');ec.hidden=true;b.hidden=false;v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});});
+  document.getElementById('endcta-go').addEventListener('click',function(){var f=document.getElementById('f');if(f.hidden){document.getElementById('ok').scrollIntoView({behavior:'smooth',block:'center'});return;}f.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){document.getElementById('f-nombre').focus({preventScroll:true});},500);try{if(window.egvTrack)window.egvTrack('cta_video',{origen:'fin video'});}catch(x){}});
   var ON='<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/>',OFF=ic.innerHTML;
   b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}
     b.setAttribute('aria-pressed',String(!v.muted));t.textContent=v.muted?'Activar sonido':'Silenciar';ic.innerHTML=v.muted?OFF:ON;});
