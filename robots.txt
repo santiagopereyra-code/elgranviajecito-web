@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /reservar/
+Disallow: /inicio/
 
 User-agent: Googlebot
 Allow: /
