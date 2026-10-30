@@ -476,8 +476,10 @@ try{
     try{if(window.claude&&claude.use){sampleFn=await claude.use('sample');}}catch(e){sampleFn=null;}
     return sampleFn;
   }
-  async function askApi(messages){ // producción: endpoint propio en elgranviajecito.com
-    var r=await fetch(window.EGV_CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:messages})});
+  var SID=(function(){try{var k='egv_sid',v=sessionStorage.getItem(k);if(!v){v='w-'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);sessionStorage.setItem(k,v);}return v;}catch(e){return 'w-'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);}})();
+  async function askApi(messages){ // producción: El Viajecito en Vercel (reglas e info las pone el servidor)
+    var r=await fetch(window.EGV_CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sid:SID,route:location.pathname,page:location.href,messages:messages})});
+    if(r.status===429)throw {code:'rate_limited'};
     if(!r.ok)throw {code:'upstream_error'};
     var j=await r.json();return {text:j.text||''};
   }
@@ -490,12 +492,12 @@ try{
     try{
       var fn=await getSample();var res;
       if(fn){ctl=new AbortController();res=await fn(input,{modelTier:'quick',cache:false,signal:ctl.signal,onText:function(u){bub.classList.remove('think');bub.textContent=u.text;ms.scrollTop=ms.scrollHeight;}});}
-      else if(window.EGV_CHAT_API){res=await askApi(input);}
+      else if(window.EGV_CHAT_API){res=await askApi(turns.slice(-24));}
       else{throw {code:'not_granted'};}
       bub.classList.remove('think');bub.textContent=res.text;linkify(bub);
       turns.push({role:'assistant',content:res.text});
       try{if(window.egvTrack)egvTrack('chat_answer',{viaje:tripName()||undefined});}catch(e){}
-      if(asked>=2||/reserv|señ|pag|cupo|lugar|quiero ir|me anoto|whatsapp/i.test(q+' '+res.text))showLead();
+      if(asked>=3||/reserv|señ|cupo|quiero ir|me anoto|anotarme|inscrib/i.test(q))showLead();
     }catch(e){
       var code=(e&&e.code)||'upstream_error';
       bub.classList.remove('think');
@@ -522,6 +524,7 @@ try{
       var tn=tripName();
       var msg='Hola! Soy '+n+'. Estuve chateando en la web'+(tn?' sobre '+tn:'')+'. Pregunté: '+summary()+'. Mi WhatsApp: '+w+' (chat web)';
       try{fetch('https://formsubmit.co/ajax/contacto@elgranviajecito.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Lead chat web: '+(tn||'general')+' · '+n,_template:'table',_captcha:'false',Nombre:n,WhatsApp:w,Viaje:tn||'-',Preguntas:summary(),Conversacion:turns.map(function(t){return (t.role==='user'?'Visitante: ':'Asistente: ')+t.content;}).join('\n'),Pagina:location.href})}).catch(function(){});}catch(e){}
+      try{if(window.EGV_CHAT_API)fetch(window.EGV_CHAT_API.replace(/\/chat$/,'/lead'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sid:SID,nombre:n,wa:w,viaje:tn||'',page:location.href,turns:turns.slice(-24)})}).catch(function(){});}catch(e){}
       try{if(window.egvTrack)egvTrack('lead_chat',{viaje:tn||undefined});}catch(e){}
       d.querySelector('.ok').hidden=false;b.textContent='Abrir WhatsApp';
       window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
