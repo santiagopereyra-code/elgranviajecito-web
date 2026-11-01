@@ -299,7 +299,7 @@ try{
           var sec=rv.closest('section')||rv.parentNode;
           var pl=document.createElement('span');pl.className='fly-pl';pl.setAttribute('aria-hidden','true');
           pl.innerHTML='<svg viewBox="0 0 24 24"><path fill="currentColor" d="M2 11.5 21.5 3l-6.3 18-4.2-7.2L2 11.5zm9.4 1.8 2.8 4.8 3.9-11.3-6.7 6.5z"/></svg>';
-          sec.style.position=sec.style.position||'relative';sec.appendChild(pl);
+          sec.style.position=sec.style.position||'relative';sec.style.overflowX='clip';sec.appendChild(pl);
           var W=sec.clientWidth;
           gsap.fromTo(pl,{x:-60,y:rv.offsetTop-40,rotation:10,autoAlpha:1},{x:W+80,y:rv.offsetTop-160,rotation:-8,duration:1.6,ease:'power1.inOut',onComplete:function(){pl.remove();}});
           var done=0;
@@ -547,3 +547,5 @@ try{
  window.addEventListener('hashchange',function(){setTimeout(function(){document.querySelectorAll('.pgr:not([hidden]) .rv').forEach(function(x){var r=x.getBoundingClientRect();if(r.top<innerHeight)x.classList.add('in');});},120);});
 })();
 }catch(e){if(window.console)console.error('[egv]',e);}
+/* 31/10 iOS: el poster se pinta de fondo (cover) para que no aparezcan bandas negras mientras carga el video */
+(function(){document.querySelectorAll('.rl-i,.fh-v').forEach(function(w){var v=w.querySelector('video'),p=(v&&v.getAttribute('poster'))||w.dataset.poster;if(p)w.style.backgroundImage='url("'+p+'")';});})();

@@ -753,3 +753,14 @@ body.dock-on .cw-fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 .pend{display:none!important}
 /* contraste en fondos oscuros */
 .on-dark .eyebrow,.rl-s .eyebrow,.dark .eyebrow{color:#B9AEC2}
+
+/* 31/10 celular: nada se sale del ancho (iOS ignoraba el clip del body y dejaba bambolear la página) */
+html{overflow-x:clip}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
+main>section,main>div,footer,.stamps-s{overflow-x:clip}
+/* 31/10 previews de video: iOS no recortaba el video a las esquinas redondeadas y mostraba el fondo negro del video */
+.tc-ph,.rl-i{-webkit-mask-image:-webkit-radial-gradient(white,black);isolation:isolate}
+.tc-v,.rl-i video,.fh-v video{background:transparent}
+.tc-v{border-radius:inherit}
+.rl-i,.fh-v{background-size:cover;background-position:center;background-repeat:no-repeat}
+.rl-i{-webkit-appearance:none;appearance:none}
