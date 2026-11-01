@@ -549,3 +549,15 @@ try{
 }catch(e){if(window.console)console.error('[egv]',e);}
 /* 31/10 iOS: el poster se pinta de fondo (cover) para que no aparezcan bandas negras mientras carga el video */
 (function(){document.querySelectorAll('.rl-i,.fh-v').forEach(function(w){var v=w.querySelector('video'),p=(v&&v.getAttribute('poster'))||w.dataset.poster;if(p)w.style.backgroundImage='url("'+p+'")';});})();
+
+/* 1/11/2026 preventa: hasta el 30/11 23:59 UY los reels completos de las fichas muestran la versión con la placa "Reservá antes del 30/11". Después vuelven solos a los de siempre. */
+(function(){
+  if(document.documentElement.classList.contains('egvpv-fin'))return;
+  var M={reel_bali2:1,reel_egipto:1,reel_filipinas:1,reel_india3:1,reel_indonesia:1,reel_japon:1,reel_peru2:1,reel_sri2:'reel_sri',reel_tailandia3:1,reel_tanzania2:'reel_tanzania',reel_testimonios2:1};
+  document.querySelectorAll('[data-src]').forEach(function(el){
+    var m=/\/video\/(reel_[a-z0-9]+)\.mp4/.exec(el.getAttribute('data-src')||'');
+    if(!m||!M[m[1]])return;
+    var base=M[m[1]]===1?m[1]:M[m[1]];
+    el.setAttribute('data-src','/video/'+base+'_preventa.mp4');
+  });
+})();
