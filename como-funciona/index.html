@@ -52,6 +52,160 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 <h1><span class="eyebrow">Reservas, pagos y cancelación</span><span class="display" data-split>Cómo funciona</span></h1>
 <p class="lead">Reservás con USD 400, pagás el resto como te quede mejor hasta 45 días antes y, si el grupo no se confirma, te devolvemos el 100%.</p>
 </div></section>
+<style>/* ===== Componente para /como-funciona/ ===== */
+.ruta{position:relative}
+.ruta-k{font:500 12px/1 "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mg);margin:0 0 10px}
+.ruta .ruta-h{font:italic 800 clamp(38px,8vw,64px)/.95 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 12px;letter-spacing:-.01em}
+.ruta .ruta-h em{font-style:inherit;background:var(--lime);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ruta-sub{color:var(--ink2);max-width:560px;margin:0 0 28px;font-size:18px}
+
+.ruta-map{position:relative;display:grid;gap:14px;grid-template-columns:1fr;padding-left:46px}
+.ruta-track{position:absolute;left:17px;top:22px;bottom:22px;width:2px;background:repeating-linear-gradient(to bottom,var(--line) 0 7px,transparent 7px 13px)}
+.ruta-fill{position:absolute;left:17px;top:22px;width:2px;height:0;background:var(--mg);transition:height .9s cubic-bezier(.6,0,.2,1)}
+.ruta-plane{position:absolute;left:0;top:4px;width:36px;height:36px;border-radius:50%;background:var(--mg);color:#fff;display:grid;place-items:center;box-shadow:0 6px 16px rgba(229,0,125,.35);transition:transform .9s cubic-bezier(.6,0,.2,1);z-index:2}
+.ruta-plane svg{width:20px;height:20px;transform:rotate(180deg);transition:transform .4s}
+
+.paso{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;cursor:pointer;transition:transform .45s,box-shadow .45s,border-color .45s,opacity .45s;opacity:.55;text-align:left;font:inherit;color:inherit;width:100%}
+.paso::before{content:"";position:absolute;left:-35px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--line);transition:background .4s,border-color .4s}
+.paso.on{opacity:1;transform:translateY(-2px);box-shadow:0 14px 34px rgba(22,16,27,.10);border-color:var(--ink)}
+.paso.on::before,.paso.hecho::before{background:var(--mg);border-color:var(--mg)}
+.paso.hecho{opacity:.85}
+.paso-top{width:100%;display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.paso-ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--paper);display:grid;place-items:center;color:var(--ink);transition:background .4s,color .4s}
+.paso.on .paso-ic{background:var(--ink);color:var(--lime)}
+.paso-ic svg{width:22px;height:22px}
+.paso-cu{font:500 11px/1.2 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.paso-cu b{display:block;color:var(--ink);font-weight:500}
+.paso h3{font:italic 800 26px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 6px}
+.paso p{margin:0;color:var(--ink2);font-size:16px;line-height:1.5}
+.paso-chip{display:inline-block;margin-top:10px;font:500 12px/1 "DM Mono",monospace;letter-spacing:.06em;padding:7px 10px;border-radius:999px;background:var(--paper);color:var(--ink2);transition:background .4s,color .4s}
+.paso.on .paso-chip{background:var(--lime);color:var(--ink)}
+/* el último paso: el encuentro */
+.paso-grupo{display:flex;margin-top:10px;height:28px}
+.paso-grupo i{width:28px;height:28px;border-radius:50%;border:2px solid #fff;margin-left:-8px;background:var(--line);transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.paso-grupo i:first-child{margin-left:0}
+.paso.on .paso-grupo i{transform:scale(1)}
+.paso-grupo i:nth-child(1){background:#E5007D;transition-delay:.25s}.paso-grupo i:nth-child(2){background:#2447B8;transition-delay:.35s}.paso-grupo i:nth-child(3){background:#C8FF3E;transition-delay:.45s}.paso-grupo i:nth-child(4){background:#1FAF57;transition-delay:.55s}.paso-grupo i:nth-child(5){background:#16101B;transition-delay:.65s}.paso-grupo i:nth-child(6){background:#FF8CC6;transition-delay:.75s}
+
+.ruta-pie{margin:18px 0 0;padding-left:46px;font-size:15px;color:var(--mut)}
+.ruta-pie b{color:var(--ink2);font-weight:600}
+.ruta-ctl{display:flex;gap:8px;margin:20px 0 0;padding-left:46px}
+.ruta-ctl button{font:500 12px/1 "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:10px 14px;cursor:pointer}
+.ruta-ctl button:focus-visible,.paso:focus-visible{outline:3px solid var(--mg);outline-offset:3px}
+
+@media (min-width:900px){
+  .ruta-map{grid-template-columns:repeat(4,1fr);gap:16px;padding:58px 0 0}
+  .ruta-track{left:28px;right:28px;top:20px;bottom:auto;width:auto;height:2px;background:repeating-linear-gradient(to right,var(--line) 0 7px,transparent 7px 13px)}
+  .ruta-fill{left:28px;top:20px;height:2px;width:0;transition:width .9s cubic-bezier(.6,0,.2,1)}
+  .ruta-plane{top:2px;left:10px}
+  .ruta-plane svg{transform:rotate(90deg)}
+  .paso::before{left:22px;top:-44px}
+  .ruta-pie,.ruta-ctl{padding-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cta-row .btn{font-family:Barlow;font-style:normal;text-transform:none;font-size:1rem}
+.cta-card{margin:28px 0;padding:20px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.cta-card p{margin:0 0 12px}
+.cta-band{background:var(--ink);color:#fff;border-radius:20px;padding:28px 20px;margin-top:40px}
+.cta-band h2{font:italic 800 clamp(34px,7vw,54px)/.95 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 10px;color:#fff}
+.cta-band h2 em{font-style:inherit;color:var(--ink);background:var(--lime);padding:0 .12em}
+.cta-band p{color:#E8E2EE;margin:0 0 16px;max-width:560px}
+.cta-band .btn-ol{color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.cta-band small{display:block;margin-top:14px;color:#BDB4C6;font-size:14px}
+@media (min-width:900px){.cta-band{padding:40px}}
+.fel{margin-top:56px}
+.fel-g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.fel-i{position:relative;margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--line)}
+.fel-i img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.fel-i:hover img{transform:scale(1.04)}
+.fel-i figcaption{position:absolute;left:10px;bottom:10px;font:500 11px/1 "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;background:rgba(22,16,27,.78);color:#fff;padding:7px 9px;border-radius:999px}
+@media (min-width:900px){.fel-g{grid-template-columns:repeat(3,1fr);gap:14px}}
+</style>
+<div class="wrap" style="padding-top:48px"><section class="ruta" id="ruta" aria-labelledby="ruta-t">
+  <p class="ruta-k">Paso a paso</p>
+  <h2 id="ruta-t" class="ruta-h">Del sí al <em>encuentro</em></h2>
+  <p class="ruta-sub">Cuatro pasos y estás con el grupo en la primera ciudad del viaje.</p>
+
+  <div class="ruta-map">
+    <div class="ruta-track" aria-hidden="true"></div>
+    <div class="ruta-fill" aria-hidden="true"></div>
+    <div class="ruta-plane" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
+
+    <button class="paso" type="button" data-i="0">
+      <div class="paso-top">
+        <span class="paso-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v8a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2z"/><path d="M15 6v12" stroke-dasharray="2 2"/><path d="M7 10h5M7 14h3"/></svg></span>
+        <span class="paso-cu">01<b>Hoy</b></span>
+      </div>
+      <h3>Reservás tu lugar</h3>
+      <p>Con una seña de USD 400 que se descuenta del precio. Te sumamos al grupo de WhatsApp del viaje y te mandamos la guía con equipaje, visas, vacunas y plata.</p>
+      <span class="paso-chip">Seña USD 400</span>
+    </button>
+
+    <button class="paso" type="button" data-i="1">
+      <div class="paso-top">
+        <span class="paso-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg></span>
+        <span class="paso-cu">02<b>Antes del vuelo</b></span>
+      </div>
+      <h3>Chequeás la visa</h3>
+      <p>Según tu nacionalidad, puede que necesites visa. Con la guía revisás los requisitos de tu pasaporte antes de comprar el pasaje, y si tenés dudas, uno de nuestros viajeros expertos lo ve con vos.</p>
+      <span class="paso-chip">Según tu pasaporte</span>
+    </button>
+
+    <button class="paso" type="button" data-i="2">
+      <div class="paso-top">
+        <span class="paso-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l20-7-3-2-6 2-6-4-2 1 4 5-4 1-2-1-1 1z"/><path d="M3 21h18"/></svg></span>
+        <span class="paso-cu">03<b>60 días antes</b></span>
+      </div>
+      <h3>Se confirma el grupo y sacás el vuelo</h3>
+      <p>Con 8 viajeros confirmamos la salida. Ahí comprás tu pasaje: te decimos a qué aeropuerto llegar y a qué hora, y te ayudamos a buscar la mejor conexión. Si el grupo no se arma, te devolvemos el 100%.</p>
+      <span class="paso-chip">Grupo confirmado</span>
+    </button>
+
+    <button class="paso" type="button" data-i="3">
+      <div class="paso-top">
+        <span class="paso-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <span class="paso-cu">04<b>Día 1</b></span>
+      </div>
+      <h3>Nos encontramos en la primera ciudad</h3>
+      <p>Llegás a la primera ciudad del viaje y ahí empieza todo: el día 1 es de llegada y encuentro con el grupo, con alguien de nuestro equipo que viaja con ustedes hasta el final.</p>
+      <div class="paso-grupo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </button>
+  </div>
+
+  <p class="ruta-pie">El saldo lo pagás como te quede mejor <b>hasta 45 días antes</b> de salir: cuotas con tu tarjeta, hasta 6 pagos mensuales sin interés o de una vez con 3% de descuento.</p>
+  <div class="ruta-ctl cta-row"><a class="btn btn-mg" href="/reservar/" data-cta="cf-esquema">Reservar mi lugar</a><a class="btn btn-ol" href="/viajes/">Ver viajes 2027</a><button type="button" id="ruta-play">Pausar</button></div>
+</section>
+<section class="fel" aria-labelledby="fel-t"><p class="ruta-k">Nuestros viajeros</p><h2 id="fel-t" class="ruta-h" style="font:italic 800 clamp(34px,7vw,56px)/.95 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 18px">Así se ve <em>después del encuentro</em></h2><div class="fel-g"><figure class="fel-i"><img loading="lazy" src="/img/gp_tanzania_19-sm.webp" srcset="/img/gp_tanzania_19-sm.webp 640w, /img/gp_tanzania_19.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="960" height="1280" alt="Viajeros de El Gran Viajecito en Zanzíbar, Tanzania" decoding="async"><figcaption>Zanzíbar, Tanzania</figcaption></figure><figure class="fel-i"><img loading="lazy" src="/img/gp_filipinas_15-sm.webp" srcset="/img/gp_filipinas_15-sm.webp 640w, /img/gp_filipinas_15.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="1280" height="960" alt="Viajeros de El Gran Viajecito en El Nido, Filipinas" decoding="async"><figcaption>El Nido, Filipinas</figcaption></figure><figure class="fel-i"><img loading="lazy" src="/img/gp_camboya_06-sm.webp" srcset="/img/gp_camboya_06-sm.webp 640w, /img/gp_camboya_06.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="960" height="1280" alt="Viajeros de El Gran Viajecito en Ta Prohm, Camboya" decoding="async"><figcaption>Ta Prohm, Camboya</figcaption></figure><figure class="fel-i"><img loading="lazy" src="/img/gp_egipto_08-sm.webp" srcset="/img/gp_egipto_08-sm.webp 640w, /img/gp_egipto_08.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="960" height="1280" alt="Viajeros de El Gran Viajecito en Giza, Egipto" decoding="async"><figcaption>Giza, Egipto</figcaption></figure><figure class="fel-i"><img loading="lazy" src="/img/gp_tailandia_14-sm.webp" srcset="/img/gp_tailandia_14-sm.webp 640w, /img/gp_tailandia_14.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="960" height="1280" alt="Viajeros de El Gran Viajecito en Chiang Mai, Tailandia" decoding="async"><figcaption>Chiang Mai, Tailandia</figcaption></figure><figure class="fel-i"><img loading="lazy" src="/img/gp_malasia_14-sm.webp" srcset="/img/gp_malasia_14-sm.webp 640w, /img/gp_malasia_14.webp 960w" sizes="(max-width: 700px) 50vw, 360px" width="960" height="1280" alt="Viajeros de El Gran Viajecito en Kuala Lumpur, Malasia" decoding="async"><figcaption>Kuala Lumpur, Malasia</figcaption></figure></div></section>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('ruta'); if(!root) return;
+  var pasos=[].slice.call(root.querySelectorAll('.paso')), plane=root.querySelector('.ruta-plane'), fill=root.querySelector('.ruta-fill'), map=root.querySelector('.ruta-map'), btn=document.getElementById('ruta-play');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i=0, timer=null, playing=!reduce, wide=matchMedia('(min-width:900px)');
+  function place(){
+    var p=pasos[i], m=map.getBoundingClientRect(), r=p.getBoundingClientRect();
+    if(wide.matches){var x=r.left-m.left+22-10; plane.style.transform='translateX('+x+'px)'; fill.style.width=Math.max(0,x)+'px'; fill.style.height='';}
+    else {var y=r.top-m.top+18-4; plane.style.transform='translateY('+y+'px)'; fill.style.height=Math.max(0,y)+'px'; fill.style.width='';}
+  }
+  function go(n){
+    i=(n+pasos.length)%pasos.length;
+    pasos.forEach(function(p,k){p.classList.toggle('on',k===i);p.classList.toggle('hecho',k<i);p.setAttribute('aria-current',k===i?'step':'false');});
+    place();
+  }
+  function tick(){clearTimeout(timer); if(!playing) return; timer=setTimeout(function(){go(i+1);tick();}, i===pasos.length-1?5200:3600);}
+  pasos.forEach(function(p,k){p.addEventListener('click',function(){go(k);playing=false;btn.textContent='Reproducir';clearTimeout(timer);});});
+  btn.addEventListener('click',function(){playing=!playing;btn.textContent=playing?'Pausar':'Reproducir';if(playing){go(i+1);tick();}else clearTimeout(timer);});
+  if(reduce) btn.textContent='Reproducir';
+  addEventListener('resize',place); wide.addEventListener&&wide.addEventListener('change',place);
+  // arranca cuando el bloque entra en pantalla
+  var started=false;
+  function start(){if(started) return; started=true; go(0); tick();}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){start();o.disconnect();}},{threshold:.3}).observe(root);} else start();
+  go(0);
+})();
+</script>
 <div class="wrap" style="padding-block:48px 80px"><div class="prose">
 <p class="pend">PENDIENTE: la tabla de cancelación es una propuesta. Santiago tiene que aprobarla y revisarla con el contador antes de publicar.</p>
 <h2 class="t">Cómo se paga</h2>
@@ -67,6 +221,7 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 <tr><td>Menos de 30 días antes</td><td>Sin devolución.</td></tr></tbody></table></div>
 <h2 class="t">El vuelo lo comprás vos</h2>
 <p>El precio no incluye el pasaje internacional porque los grupos se arman con viajeros de toda Latinoamérica y España, y cada uno vuela desde su país. Te decimos a qué aeropuerto llegar y a qué hora nos encontramos. Recomendamos emitirlo cuando el grupo esté confirmado y con seguro de cancelación.</p>
+<div class="cta-card"><p><b>Primero reservás, después volás.</b> Asegurás tu lugar con USD 400 y comprás el pasaje cuando el grupo está confirmado. Si no se arma, te devolvemos el 100%.</p><div class="cta-row"><a class="btn btn-mg" href="/reservar/" data-cta="cf-vuelo">Reservar con USD 400</a><a class="btn btn-ol" href="https://wa.me/59899244227?text=Hola%21%20Le%C3%AD%20c%C3%B3mo%20funciona%20y%20quiero%20reservar%20mi%20lugar%20%28web%29" target="_blank" rel="noopener">Hablar por WhatsApp</a></div></div>
 <h2 class="t">Viajes para vivirlos en movimiento</h2>
 <p>Nuestros viajes son de aventura: la idea es meterse en cada lugar, no mirarlo desde la ventanilla. Por eso los días son activos y algunos, intensos.</p>
 <ul><li><b>Varios cambios de transporte:</b> trenes, barcos, lanchas, tuk tuks, jeeps y buses para ir de un destino a otro.</li><li><b>Caminatas:</b> ciudades, aldeas, selvas y miradores se recorren a pie, a veces con subidas.</li><li><b>Templos con escaleras:</b> muchos de los lugares más impactantes están arriba, y la recompensa llega subiendo.</li><li><b>Actividades al aire libre:</b> snorkel, kayak, safaris y alguna madrugada para ver el amanecer.</li></ul>
@@ -74,6 +229,7 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 <h2 class="t">Dónde dormimos</h2>
 <p>No buscamos hoteles 5 estrellas: buscamos dormir donde pasan las cosas. En las grandes ciudades nos quedamos en hoteles cómodos y bien ubicados. Fuera de ellas, la mayoría de los hospedajes son posadas, guesthouses y lodges con encanto: lugares sencillos y lindos, siempre elegidos para que aproveches cada destino al máximo.</p>
 <h2 class="t">Preguntas frecuentes</h2><div class="faq"><details><summary>¿Cuánto hay que pagar para reservar?</summary><p>Reservás tu lugar con una seña de USD 400, que se descuenta del precio del viaje. El saldo se paga hasta 45 días antes de la salida: en cuotas con tu tarjeta, en hasta 6 pagos mensuales en dólares sin interés, o de una vez por transferencia o USDT con 3% de descuento.</p></details><details><summary>¿Qué pasa si el grupo no se arma?</summary><p>Cada salida se confirma con un mínimo de 8 viajeros 60 días antes. Si no llegamos, te devolvemos el 100% de lo pagado o pasás tu lugar a otra fecha, lo que prefieras. Por eso te recomendamos no emitir el vuelo hasta que confirmemos el grupo.</p></details><details><summary>¿El precio incluye el vuelo?</summary><p>No. Los grupos se arman con viajeros de toda Latinoamérica y España, así que cada uno vuela desde su país al punto de encuentro, que es la primera ciudad del viaje. Te decimos a qué aeropuerto llegar y a qué hora nos encontramos, y te ayudamos a buscar el vuelo.</p></details><details><summary>¿Qué estado físico hace falta?</summary><p>Son viajes de aventura: hay varios cambios de transporte, caminatas, templos con escaleras y actividades al aire libre. No hace falta ser atleta, pero sí una condición física mínima para disfrutar cada día a pleno. En cada viaje te contamos qué nivel pide.</p></details><details><summary>¿Puedo viajar solo o sola?</summary><p>Sí, muchos vienen así. Compartís habitación con otra persona del grupo (habitación individual disponible con costo extra según el viaje: consultanos) y desde el primer día te sumamos al grupo de WhatsApp del viaje para que se conozcan antes de salir.</p></details><details><summary>¿Qué edad tienen los viajeros?</summary><p>Los grupos son de 21 a 60 años, de Uruguay, Argentina, Chile, Colombia, México, Perú, España y otros países de habla hispana.</p></details><details><summary>¿Primero reservo o primero compro el vuelo?</summary><p>Primero reservá tu lugar y comprá el vuelo cuando confirmemos el grupo (a más tardar 60 días antes de la salida). Así no arriesgás el pasaje y, si se suman viajeros de tu país, pueden coordinar para volar juntos.</p></details><details><summary>¿Cuántos días de vuelo tengo que sumar?</summary><p>Desde Sudamérica, a Asia y África contá entre uno y dos días para llegar y lo mismo para volver, según las escalas. A Perú, unas horas. Te ayudamos a buscar la mejor conexión desde tu ciudad.</p></details><details><summary>¿Y si tengo que cancelar?</summary><p>Con más de 60 días de anticipación te devolvemos todo menos la seña, que podés usar en otro viaje durante 12 meses. Entre 60 y 30 días, el 50% del total. Con menos de 30 días, no hay devolución.</p></details></div>
+<section class="cta-band"><h2>¿Te sumás al <em>próximo grupo</em>?</h2><p>Elegís el viaje, reservás con USD 400 y te sumamos al grupo de WhatsApp del viaje. En preventa, los primeros 6 que reservan cada viaje pagan USD 100 menos.</p><div class="cta-row"><a class="btn btn-mg" href="/reservar/" data-cta="cf-final">Reservar mi lugar</a><a class="btn btn-ol" href="/viajes/">Ver viajes y fechas</a></div><small>¿Dudas antes de reservar? <a href="https://wa.me/59899244227?text=Hola%21%20Le%C3%AD%20c%C3%B3mo%20funciona%20y%20quiero%20reservar%20mi%20lugar%20%28web%29" target="_blank" rel="noopener" style="color:#fff">Escribinos por WhatsApp</a>.</small></section>
 </div></div>
 </div></main><div class="lbx" id="lbx" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada"><img alt=""><p class="lbx-c"></p><button type="button" class="lbx-x" aria-label="Cerrar">×</button><button type="button" class="lbx-p" aria-label="Anterior">←</button><button type="button" class="lbx-n" aria-label="Siguiente">→</button></div><footer class="ft"><div class="wrap">
 <div class="ft-g">
@@ -102,7 +258,7 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 
 <!-- v9.5 asistente de la web -->
 
-<button type="button" class="cw-fab" id="cwFab" aria-haspopup="dialog" aria-controls="cwPanel"><span class="dot" aria-hidden="true"></span>¿Dudas? Preguntale al Viajecito</button>
+<button type="button" class="cw-fab" id="cwFab" aria-haspopup="dialog" aria-controls="cwPanel"><span class="dot" aria-hidden="true"></span>¿Dudas? Escribinos</button>
 <section class="cw" id="cwPanel" role="dialog" aria-label="Asistente de El Gran Viajecito" aria-hidden="true" inert>
 <div class="cw-hd"><div class="av">V</div><div><b>El Viajecito</b><small>Asistente · responde al toque</small></div><button type="button" class="x" aria-label="Cerrar">×</button></div>
 <div class="cw-ms" id="cwMs" aria-live="polite"></div>
