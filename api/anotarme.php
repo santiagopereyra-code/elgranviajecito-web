@@ -67,6 +67,15 @@ if ($WA_PHONE !== '' && $WA_APIKEY !== '') {
   @file_get_contents($url, false, $ctx);
 }
 
+// 4) Telegram (token y chat en egv-privado/telegram.php)
+$tg = @include $DATA_DIR . '/telegram.php';
+if (is_array($tg) && !empty($tg['tg_token']) && !empty($tg['tg_chat'])) {
+  $t = "🌍 Nuevo anotado viajecitos 2027\n\nNombre: $nombre\nPaís: $pais\nWhatsApp: $wa\nMail: $mail\n\nWhatsApp directo: https://wa.me/" . preg_replace('/\D/', '', $wa);
+  $c = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8, 'header' => "Content-Type: application/json\r\n",
+    'content' => json_encode(['chat_id' => $tg['tg_chat'], 'text' => $t, 'disable_web_page_preview' => true])]]);
+  @file_get_contents('https://api.telegram.org/bot' . $tg['tg_token'] . '/sendMessage', false, $c);
+}
+
 echo '{"ok":true}';
 
 function egv_smtp($user, $pass, $to, $replyTo, $subject, $body) {
