@@ -764,3 +764,8 @@ main>section,main>div,footer,.stamps-s{overflow-x:clip}
 .tc-v{border-radius:inherit}
 .rl-i,.fh-v{background-size:cover;background-position:center;background-repeat:no-repeat}
 .rl-i{-webkit-appearance:none;appearance:none}
+
+/* preventa hasta el 30/11/2026: .egvpv se ve hasta el corte; .egvpv-off, después (clase egvpv-fin en <html>, la pone un script en el <head>) */
+.egvpv-off{display:none!important}
+html.egvpv-fin .egvpv{display:none!important}
+html.egvpv-fin .egvpv-off{display:inline!important}
