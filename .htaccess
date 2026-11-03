@@ -9,6 +9,8 @@ RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://elgranviajecito.com/$1 [R=301,L]
+# El inicio ahora está en la raíz
+RewriteRule ^inicio/?$ / [R=301,L]
 # URLs viejas del WordPress con destino exacto
 RewriteRule ^2020/01/22/6\-lugares\-que\-ver\-en\-manila/?$ /guias/filipinas/que-ver-en-manila/ [R=301,L]
 RewriteRule ^2020/01/22/que\-ver\-en\-la\-ciudad\-de\-amritsar/?$ /guias/india/que-ver-en-amritsar/ [R=301,L]
