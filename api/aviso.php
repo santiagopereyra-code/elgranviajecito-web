@@ -24,7 +24,7 @@ if ($n >= 10) { http_response_code(429); echo '{"ok":false}'; exit; }
 @file_put_contents($rl, $n + 1);
 
 $clean = function ($v, $max) { $v = trim(strip_tags((string)$v)); return mb_substr($v, 0, $max); };
-$tipos = ['nl' => '📩 Avisame de nuevas salidas', 'consulta' => '💬 Consulta web', 'reserva' => '✈️ Pedido de reserva', 'chat' => '🤖 Lead del chat'];
+$tipos = ['nl' => '📩 Avisame de nuevas salidas', 'consulta' => '💬 Consulta web', 'reserva' => '✈️ Pedido de reserva', 'chat' => '🤖 Lead del chat', 'preins' => '🔔 Preinscripción (viaje próximo)'];
 $tipo = $tipos[$in['tipo'] ?? ''] ?? '📝 Formulario web';
 $txt = $tipo . "\n";
 $wa = '';

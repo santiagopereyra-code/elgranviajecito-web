@@ -566,3 +566,12 @@ try{
     el.setAttribute('data-src','/video/'+base+'_preventa.mp4'+(base==='reel_indonesia'?'?v=2':''));
   });
 })();
+
+/* 3/11/2026 preinscripción a viajes próximos (Sri Lanka y Maldivas, China Imperial): guarda en anotarme.php, mail por FormSubmit y aviso */
+(function(){document.querySelectorAll('[data-preins]').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}
+var g=function(n){var x=f.querySelector('[name="'+n+'"]');return x?x.value.trim():'';};var v=g('viaje')||'Viaje próximo';
+try{fetch('/api/anotarme.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:g('nombre'),pais:'-',whatsapp:g('whatsapp'),mail:g('mail'),viaje:v,web:g('web')}),keepalive:true}).catch(function(){});}catch(e){}
+try{fetch('https://formsubmit.co/ajax/contacto@elgranviajecito.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Preinscripción: '+v+' · '+g('nombre'),_template:'table',_captcha:'false',_replyto:g('mail'),Viaje:v,Nombre:g('nombre'),WhatsApp:g('whatsapp'),Mail:g('mail'),Pagina:location.href})}).catch(function(){});}catch(e){}
+if(window.egvAviso)window.egvAviso('preins',{Viaje:v,Nombre:g('nombre'),WhatsApp:g('whatsapp'),Mail:g('mail'),Pagina:location.pathname});
+if(window.egvTrack)window.egvTrack('lead_espera',{origen:'preinscripcion',viaje:v});
+f.querySelectorAll('label,button').forEach(function(x){x.hidden=true;});var ok=f.querySelector('.ok');if(ok)ok.hidden=false;});});})();

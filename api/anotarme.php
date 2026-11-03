@@ -18,6 +18,7 @@ $pais   = $clean($in['pais'] ?? '', 40);
 $wa     = $clean($in['whatsapp'] ?? '', 30);
 $mail   = $clean($in['mail'] ?? '', 120);
 $trampa = $clean($in['web'] ?? '', 50);
+$viaje  = $clean($in['viaje'] ?? '', 60);   // preinscripción a un viaje próximo (3/11/2026)
 
 if ($trampa !== '') { echo '{"ok":true}'; exit; }            // bot: se descarta en silencio
 if ($nombre === '' || $pais === '' || !preg_match('/^[+0-9 ()-]{7,}$/', $wa) || !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
@@ -38,15 +39,15 @@ $fecha = (new DateTime('now', new DateTimeZone('America/Montevideo')))->format('
 $csv = $DATA_DIR . '/anotados-2027.csv';
 $nuevo = !file_exists($csv);
 if ($fh = @fopen($csv, 'a')) {
-  if ($nuevo) { fwrite($fh, "\xEF\xBB\xBF"); fputcsv($fh, ['Fecha', 'Nombre', 'País', 'WhatsApp', 'Mail']); }
-  fputcsv($fh, [$fecha, $nombre, $pais, $wa, $mail]);
+  if ($nuevo) { fwrite($fh, "\xEF\xBB\xBF"); fputcsv($fh, ['Fecha', 'Nombre', 'País', 'WhatsApp', 'Mail', 'Preinscripción']); }
+  fputcsv($fh, [$fecha, $nombre, $pais, $wa, $mail, $viaje]);
   fclose($fh);
 }
 
 // 2) mail a contacto@ (por SMTP con el buzón, así no cae en spam; si no hay contraseña, usa mail())
-$asunto = 'Nuevo anotado viajecitos 2027 · ' . $nombre;
+$asunto = ($viaje !== '' ? 'Preinscripción ' . $viaje : 'Nuevo anotado viajecitos 2027') . ' · ' . $nombre;
 $cuerpo = "Se anotó alguien en la pantalla de entrada de elgranviajecito.com\n\n"
-        . "Nombre: $nombre\nPaís: $pais\nWhatsApp: $wa\nMail: $mail\nFecha: $fecha\n\n"
+        . ($viaje !== '' ? "Preinscripción a: $viaje\n" : '') . "Nombre: $nombre\nPaís: $pais\nWhatsApp: $wa\nMail: $mail\nFecha: $fecha\n\n"
         . "WhatsApp directo: https://wa.me/" . preg_replace('/\D/', '', $wa) . "\n";
 $SMTP_USER = $cfg['smtp_user'] ?? 'contacto@elgranviajecito.com';
 $SMTP_PASS = $cfg['smtp_pass'] ?? '';
