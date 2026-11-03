@@ -575,3 +575,15 @@ try{fetch('https://formsubmit.co/ajax/contacto@elgranviajecito.com',{method:'POS
 if(window.egvAviso)window.egvAviso('preins',{Viaje:v,Nombre:g('nombre'),WhatsApp:g('whatsapp'),Mail:g('mail'),Pagina:location.pathname});
 if(window.egvTrack)window.egvTrack('lead_espera',{origen:'preinscripcion',viaje:v});
 f.querySelectorAll('label,button').forEach(function(x){x.hidden=true;});var ok=f.querySelector('.ok');if(ok)ok.hidden=false;});});})();
+
+/* v11: postales de quienes viajaron, de a dos, rotando solas */
+(function(){var rv=document.querySelector('.pcs #rv');if(!rv)return;var cs=[].slice.call(rv.querySelectorAll('.rc'));if(cs.length<3)return;
+if(cs.length%2){var cl=cs[0].cloneNode(true);cl.setAttribute('aria-hidden','true');rv.appendChild(cl);cs.push(cl);}
+rv.classList.add('duo');cs.forEach(function(c,i){c.classList.add(i%2?'c2':'c1');});
+var n=Math.ceil(cs.length/2),k=0,t;
+function show(p){cs.forEach(function(c,i){var on=Math.floor(i/2)===p;c.classList.toggle('on',on);if(on){c.classList.remove('pre');c.classList.add('go');}});}
+show(0);
+function go(){k=(k+1)%n;show(k);}
+function start(){clearInterval(t);t=setInterval(go,7000);}
+rv.addEventListener('mouseenter',function(){clearInterval(t);});rv.addEventListener('mouseleave',start);
+start();})();
