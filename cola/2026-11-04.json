@@ -1,0 +1,20 @@
+[
+ {
+  "id": "fil_empezo",
+  "hora": "08:30",
+  "viaje": "Filipinas y Vietnam",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_empezo.mp4",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #viajarsolo #filipinas",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tai_reservas",
+  "hora": "09:15",
+  "viaje": "Tailandia y Camboya",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_reservas.mp4",
+  "texto": "Tailandia y Camboya, 16 días en octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #camboya",
+  "portada_ms": 1500
+ }
+]

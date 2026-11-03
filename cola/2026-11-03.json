@@ -1,0 +1,164 @@
+[
+ {
+  "id": "fil_angel",
+  "hora": "19:00",
+  "viaje": "Filipinas y Vietnam",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_angel.mp4",
+  "texto": "Y es real. Palawan, Filipinas y Vietnam en febrero 2028. Comentá FILIPINAS y te mando el itinerario. #filipinas #palawan #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tai_navidad",
+  "hora": "19:15",
+  "viaje": "Tailandia y Camboya",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_navidad.mp4",
+  "texto": "El regalo de este año: 16 días en Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "egi_nrain",
+  "hora": "19:30",
+  "viaje": "Egipto Total",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá EGIPTO y te mando el itinerario. #egipto #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tan_toggle",
+  "hora": "19:45",
+  "viaje": "Tanzania y Zanzíbar",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle.mp4",
+  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá TANZANIA y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500
+ },
+ {
+  "id": "bal_angel",
+  "hora": "20:00",
+  "viaje": "Bali Relax",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_angel.mp4",
+  "texto": "Y es real. Tanah Lot y los atardeceres de Bali. Bali Relax, julio 2027. Comentá BALI y te mando el itinerario. #bali #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "ims_reservas",
+  "hora": "20:15",
+  "viaje": "Indonesia, Malasia y Singapur",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_reservas.mp4",
+  "texto": "Singapur, Malasia, Komodo, Gili y Bali en 18 días. Comentá INDONESIA y te mando el itinerario. #indonesia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "fil_bateria",
+  "hora": "20:30",
+  "viaje": "Filipinas y Vietnam",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_bateria.mp4",
+  "texto": "Recarga completa: Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #humorviajero #filipinas",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tai_pelicula",
+  "hora": "20:45",
+  "viaje": "Tailandia y Camboya",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_pelicula.mp4",
+  "texto": "Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "egi_roles",
+  "hora": "21:00",
+  "viaje": "Egipto Total",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_roles.mp4",
+  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Egipto Total, abril 2027. Comentá EGIPTO y te mando el itinerario. #humorviajero #egipto",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tan_empezo",
+  "hora": "21:15",
+  "viaje": "Tanzania y Zanzíbar",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_empezo.mp4",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Tanzania y Zanzíbar, septiembre 2027. Comentá TANZANIA y te mando el itinerario. #viajarsolo #safari",
+  "portada_ms": 1500
+ },
+ {
+  "id": "ims_toggle",
+  "hora": "21:30",
+  "viaje": "Indonesia, Malasia y Singapur",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_toggle.mp4",
+  "texto": "Activada hasta el 30/11. Indonesia, Malasia y Singapur, 18 días. Comentá INDONESIA y te mando el itinerario. #indonesia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "bal_vlog",
+  "hora": "21:45",
+  "viaje": "Bali Relax",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_vlog.mp4",
+  "texto": "Así es Bali Relax: arrozales, templos, cascadas y Tanah Lot. Julio 2027. Comentá BALI y te mando el itinerario. #bali #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "fil_navidad",
+  "hora": "22:00",
+  "viaje": "Filipinas y Vietnam",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_navidad.mp4",
+  "texto": "Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #filipinas #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tai_bateria",
+  "hora": "22:15",
+  "viaje": "Tailandia y Camboya",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_bateria.mp4",
+  "texto": "Recarga completa: Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #humorviajero #tailandia",
+  "portada_ms": 1500
+ },
+ {
+  "id": "egi_vlog",
+  "hora": "22:30",
+  "viaje": "Egipto Total",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_vlog.mp4",
+  "texto": "Giza y Saqqara en Egipto Total, abril 2027. Comentá EGIPTO y te mando el itinerario. #egipto #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "tan_nrain",
+  "hora": "22:45",
+  "viaje": "Tanzania y Zanzíbar",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_nrain.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en septiembre. Safari y Zanzíbar, 13 días. Comentá TANZANIA y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500
+ },
+ {
+  "id": "ims_pelicula",
+  "hora": "23:00",
+  "viaje": "Indonesia, Malasia y Singapur",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_pelicula.mp4",
+  "texto": "Indonesia, Malasia y Singapur, junio 2027. Comentá INDONESIA y te mando el itinerario. #indonesia #singapur",
+  "portada_ms": 1500
+ },
+ {
+  "id": "bal_roles",
+  "hora": "23:15",
+  "viaje": "Bali Relax",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_roles.mp4",
+  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Bali Relax, julio 2027. Comentá BALI y te mando el itinerario. #humorviajero #bali",
+  "portada_ms": 1500
+ }
+]
