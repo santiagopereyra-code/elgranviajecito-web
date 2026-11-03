@@ -563,6 +563,6 @@ try{
     var m=/\/video\/(reel_[a-z0-9]+)\.mp4/.exec(el.getAttribute('data-src')||'');
     if(!m||!M[m[1]])return;
     var base=M[m[1]]===1?m[1]:M[m[1]];
-    el.setAttribute('data-src','/video/'+base+'_preventa.mp4');
+    el.setAttribute('data-src','/video/'+base+'_preventa.mp4'+(base==='reel_indonesia'?'?v=2':''));
   });
 })();
