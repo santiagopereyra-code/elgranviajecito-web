@@ -1,0 +1,38 @@
+name: Publicador de Instagram
+# Publica la cola del día de @elgranviajecito (rama "publicador"), un ítem por corrida.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publicador-instagram
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: publicador
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Publicar lo que toca
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          TOPE_PRUEBA_DIA: "18"
+        run: node publicador.mjs
+      - name: Guardar estado
+        run: |
+          if [ -n "$(git status --porcelain estado)" ]; then
+            git config user.name "publicador-egv"
+            git config user.email "publicador@users.noreply.github.com"
+            git add estado
+            git commit -m "estado $(TZ=America/Montevideo date +%F_%H:%M)"
+            git pull --rebase origin publicador
+            git push origin HEAD:publicador
+          fi
