@@ -21,7 +21,9 @@ $trampa = $clean($in['web'] ?? '', 50);
 $viaje  = $clean($in['viaje'] ?? '', 60);   // preinscripción a un viaje próximo (3/11/2026)
 
 if ($trampa !== '') { echo '{"ok":true}'; exit; }            // bot: se descarta en silencio
-if ($nombre === '' || $pais === '' || !preg_match('/^[+0-9 ()-]{7,}$/', $wa) || !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+// En la preinscripción (viaje próximo) el WhatsApp es opcional: se pide solo nombre y mail.
+$waOk = preg_match('/^[+0-9 ()-]{7,}$/', $wa) || ($viaje !== '' && $wa === '');
+if ($nombre === '' || $pais === '' || !$waOk || !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
   http_response_code(422); echo '{"ok":false,"error":"datos"}'; exit;
 }
 
