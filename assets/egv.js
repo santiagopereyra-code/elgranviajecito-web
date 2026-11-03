@@ -101,7 +101,7 @@ try{
 (function(){
   document.querySelectorAll('.fh-v').forEach(function(w){
     var v=w.querySelector('video');if(!v||!w.dataset.src)return;
-    var sec=w.closest('.fh'),bg=sec&&sec.querySelector('.fh-bgv');
+    var sec=w.closest('.fh'),bg=sec&&sec.querySelector('.fh-bgv');if(bg){bg.pause();bg.removeAttribute('autoplay');bg.remove();bg=null;}
     v.addEventListener('ended',function(){w.classList.add('ended');if(sec)sec.classList.add('vend');if(bg){bg.removeAttribute('autoplay');bg.pause();}});
     if(bg){v.addEventListener('play',function(){if(!sec.classList.contains('vend')){bg.currentTime=v.currentTime;bg.play().catch(function(){});}});v.addEventListener('pause',function(){bg.pause();});}
     function op(){v.pause();window.egvOpenReel(w.dataset.src,w.dataset.poster,w.dataset.t,w.querySelector('.fh-snd'));}

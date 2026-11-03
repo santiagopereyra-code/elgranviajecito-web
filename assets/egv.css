@@ -769,3 +769,6 @@ main>section,main>div,footer,.stamps-s{overflow-x:clip}
 .egvpv-off{display:none!important}
 html.egvpv-fin .egvpv{display:none!important}
 html.egvpv-fin .egvpv-off{display:inline!important}
+
+/* v10 ficha en PC: sin fondo desenfocado; la foto y el título se ven mientras corre el video */
+@media (min-width:980px){.fh-bgv{display:none!important}.fh.has-v .fh-ph{opacity:1}}
