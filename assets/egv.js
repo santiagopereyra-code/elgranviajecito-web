@@ -462,7 +462,7 @@ try{
     if(ms.children.length)return;
     var tn=tripName();
     add('a',tn?('¡Hola! Soy el asistente de El Gran Viajecito. Estás mirando '+tn+'. Preguntame lo que quieras del viaje: fechas, qué incluye, cómo es el grupo o cómo se reserva.'):'¡Hola! Soy el asistente de El Gran Viajecito. Preguntame sobre los viajes 2027, cómo son los grupos, qué incluye el precio o cómo se reserva.');
-    setChips(tn?['¿Qué incluye el precio?','¿Cómo es el grupo?','¿Puedo ir solo/a?','¿Cómo reservo?']:['¿Cómo son los grupos?','¿Qué viaje me conviene?','¿Puedo viajar solo/a?','¿Cómo se paga?']);
+    setChips(tn?['¿Qué incluye el precio?','¿Cómo es el grupo?','¿Desde dónde salen los viajes?','¿Puedo ir solo/a?','¿Cómo reservo?']:['¿Cómo son los grupos?','¿Desde dónde salen los viajes?','¿Qué viaje me conviene?','¿Puedo viajar solo/a?','¿Cómo se paga?']);
   }
   function open(){document.body.classList.add('cw-open');panel.setAttribute('aria-hidden','false');panel.inert=false;greet();setTimeout(function(){txt.focus();},350);try{if(window.egvTrack)egvTrack('chat_open',{viaje:tripName()||undefined});}catch(e){}}
   function close(){document.body.classList.remove('cw-open');panel.setAttribute('aria-hidden','true');panel.inert=true;fab.focus();}
