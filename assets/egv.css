@@ -782,3 +782,29 @@ html.egvpv-fin .egvpv-off{display:inline!important}
 
 /* 4/11/2026 selector de videos de testimonios en Opiniones del inicio */
 .op-pl{display:flex;gap:8px;margin-top:12px;max-width:320px}.op-pl button{flex:1 1 0;min-width:0;aspect-ratio:9/16;max-width:72px;border:2px solid transparent;border-radius:10px;padding:0;background:#1c1424 center/cover no-repeat;cursor:pointer;opacity:.7}.op-pl button[aria-pressed="true"]{border-color:#f62085;opacity:1}
+
+/* 4/11/2026 preventa bien destacada + cupos limitados (lo de preventa lleva .egvpv y se va solo después del 30/11) */
+.egv-pill{display:inline-flex;align-items:center;gap:6px;background:var(--mg);color:#fff;border-radius:999px;padding:6px 12px;font:700 .75rem/1.1 var(--mono);letter-spacing:.03em;text-transform:uppercase;max-width:100%}
+.egv-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none}
+html.egvpv-fin .egv-pill.egvpv-off{display:inline-flex!important}
+.egv-urg{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0}
+.egv-cup{font-size:var(--fs-s);font-weight:600;color:#fff}
+.egv-cup::before{content:"●";color:var(--lime);margin-right:6px;font-size:.7em;vertical-align:.15em}
+.egv-old{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--mg);opacity:.75;font-weight:600}
+.fh-price .egv-old{font:700 italic 1.5rem/1 var(--cond);color:#E9E3EE;align-self:baseline}
+.fh-price b span{color:inherit}.fh-price b .egvpv{color:var(--lime)}
+.hero-facts .egv-old{color:#D9D0E0}.hero-facts b .egvpv{color:var(--lime)}
+.buy .big .egvpv{color:var(--mg)}.buy .big .egv-old{font-size:1.4rem;color:var(--mut);margin-left:6px}
+.buy .egv-pre{background:var(--mg);font-weight:500}
+.buy .egv-pre b{color:var(--lime)}
+.egv-pre .egv-pill{display:flex;width:fit-content;margin-bottom:8px;background:var(--ink);padding:5px 10px}
+.egv-guarda{margin:0;font-size:var(--fs-s);line-height:1.4;color:var(--ink);font-weight:600}
+.egv-guarda::before{content:"✦ ";color:var(--mg)}
+.dock .p .egvpv{color:var(--mg);font-weight:700}
+.egv-last{background:var(--ink);color:#fff;border-radius:22px;padding:28px 22px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:8px}
+.egv-last h2.t{margin:0;color:#fff}
+.egv-last p{margin:0;color:#E9E3EE;max-width:60ch}.egv-last p b{color:var(--lime)}
+.egv-last .cta{display:flex;flex-wrap:wrap;gap:10px}
+@media (min-width:700px){.egv-last{padding:36px 36px}}
+.tc-stub>.egvpv{background:var(--mg);color:#fff;border-radius:999px;padding:6px 12px;font-weight:600}
+.tc-stub>.egvpv b{color:var(--lime)}
