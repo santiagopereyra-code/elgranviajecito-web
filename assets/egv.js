@@ -29,15 +29,7 @@ try{
     try{window.open(url,'_blank');}catch(e){}
     if(window.egvTrack)window.egvTrack('lead_espera',{viaje:g('destino')});
   });});
-  // reservar
-  var sel=document.getElementById('r-v');
-  if(sel){
-    var q=new URLSearchParams(location.search).get('v');if(q)sel.value=q;
-    var fmt=function(n){return 'USD '+n.toLocaleString('es-UY');};
-    var upd=function(){var o=sel.selectedOptions[0];var p=+o.dataset.p;document.getElementById('r-name').textContent=o.textContent.split(' · ')[0];document.getElementById('r-dates').textContent=o.dataset.d;document.getElementById('r-price').textContent=fmt(p);document.getElementById('r-bal').textContent=fmt(p-400);};
-    sel.addEventListener('change',upd);upd();
-    document.getElementById('res').addEventListener('submit',function(ev){ev.preventDefault();var f=ev.target;if(!f.checkValidity()){f.reportValidity();return;}var ok=document.getElementById('r-ok');ok.hidden=false;var fd=new FormData(f),parts=[];fd.forEach(function(v,k){if(v&&String(v).trim())parts.push(k+': '+String(v).trim());});var o=document.getElementById('r-v').selectedOptions[0];var msg='Hola! Quiero reservar '+o.textContent.split(' · ')[0]+' ('+o.dataset.d+'). '+parts.join(' · ')+' (web)';var url='https://wa.me/59899244227?text='+encodeURIComponent(msg);try{var obj={_subject:'Reserva web: '+o.textContent.split(' · ')[0]+' · '+document.getElementById('r-n').value.trim(),_template:'table',_captcha:'false',Viaje:o.textContent.split(' · ')[0]+' ('+o.dataset.d+')',Pagina:location.href};fd.forEach(function(v,k){if(v&&String(v).trim())obj[k]=String(v).trim();});var em=f.querySelector('[type=email]');if(em&&em.value)obj._replyto=em.value.trim();fetch('https://formsubmit.co/ajax/contacto@elgranviajecito.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(obj)}).catch(function(){});}catch(e){}try{var av={Viaje:obj.Viaje};fd.forEach(function(v,k){if(v&&String(v).trim()&&k!=='viaje')av[k.charAt(0).toUpperCase()+k.slice(1)]=String(v).trim();});window.egvAviso('reserva',av);}catch(e){}ok.innerHTML='¡Listo, '+document.getElementById('r-n').value.split(' ')[0]+'! Para confirmar tu lugar, mandanos el pedido por WhatsApp y te pasamos cómo pagar la seña: <a class="btn btn-mg" style="margin-top:10px" target="_blank" rel="noopener" href="'+url+'">Enviar por WhatsApp</a>';try{window.open(url,'_blank');}catch(e){}});
-  }
+  // reservar: la pre-reserva tiene su propio script en /reservar/ (EGV_PRERESERVA)
   // visor de fotos
   var lb=document.getElementById('lbx');
   if(lb){var li=lb.querySelector('img'),lc=lb.querySelector('.lbx-c'),list=[],k=0,last=null;
@@ -409,10 +401,9 @@ try{
 (function(){var T=function(e,p){if(window.egvTrack)window.egvTrack(e,p);};
  function route(){var r=location.pathname;T('page_view',{ruta:r});
   var m=r.match(/^\/viajes\/([a-z-]+)\/$/);if(m){var pg=document.querySelector('.pgr:not([hidden]) h1 .display');T('view_ficha',{viaje:pg?pg.textContent:m[1]});}
-  if(r.indexOf('/reservar/')===0){var o=document.getElementById('r-v');T('begin_reserva',{viaje:o&&o.selectedOptions[0]?o.selectedOptions[0].textContent.split(' · ')[0]:''});}}
+  if(r.indexOf('/reservar/')===0){var o=document.getElementById('pr-v');T('begin_reserva',{viaje:o&&o.selectedOptions[0]?o.selectedOptions[0].textContent.split(' · ')[0]:''});}}
  setTimeout(route,400);
  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!a)return;var pg=document.querySelector('.pgr:not([hidden]) h1 .display');T('click_whatsapp',{viaje:pg?pg.textContent:'general'});},true);
- var res=document.getElementById('res');if(res)res.addEventListener('submit',function(){var o=document.getElementById('r-v');T('pago_sena',{viaje:o&&o.selectedOptions[0]?o.selectedOptions[0].textContent.split(' · ')[0]:'',value:400});},true);
 })();
 
 }catch(e){if(window.console)console.error('[egv]',e);}

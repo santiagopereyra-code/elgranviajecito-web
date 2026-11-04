@@ -842,3 +842,29 @@ html.egvpv-fin .egv-pill.egvpv-off{display:inline-flex!important}
 .rl:has(>.rl-i:nth-child(3):last-child) .rl-more{font-size:.7rem;padding:7px 10px 7px 7px;gap:6px}
 .rl:has(>.rl-i:nth-child(3):last-child) .rl-more::before{width:20px;height:20px;background-size:12px}
 }
+/* pre-reserva (/reservar/) */
+.pr-f{gap:16px}
+.pr-intro{background:var(--card,#fff);border:1.5px solid var(--ctl);border-left:5px solid var(--mg,#E5007D);border-radius:14px;padding:16px 18px;display:grid;gap:8px;font-size:var(--fs-s);line-height:1.5}
+.pr-req{font-size:.8125rem;color:var(--mut)}
+.pr-f h2.pr-h{font-size:1.8rem;margin:14px 0 0}
+.pr-f .fld label{font-weight:600}
+.pr-2{display:grid;gap:16px}
+@media (min-width:640px){.pr-2{grid-template-columns:1fr 1fr}}
+.pr-hint{font-weight:500;font-size:.8125rem;color:var(--mut)}
+.pr-e{font-weight:600;font-size:.8125rem;color:#B00045;min-height:0}
+.pr-e:empty{display:none}
+.pr-f [aria-invalid="true"]{border-color:#B00045;box-shadow:0 0 0 3px #B0004522}
+.pr-chk{display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-s);line-height:1.45}
+.pr-chk input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--mg,#E5007D)}
+.pr-chk input[aria-invalid="true"]{outline:2px solid #B00045;outline-offset:2px}
+.pr-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.pr-note{font-size:.8125rem;color:var(--mut);text-align:center}
+.pr-f .btn[disabled]{opacity:.55;cursor:default}
+.pr-f .ok{line-height:1.5}
+/* dock con "Aplicar para reservar lugar" (4/11/2026) */
+.dock .p{min-width:0}
+.dock .p b .egv-old{display:block;font-size:.72rem;line-height:1.1;margin:0}
+.dock .p b{white-space:nowrap}
+.dock .dg .btn-mg{padding:0 16px;font-size:.875rem;line-height:1.15;text-align:center;white-space:normal;max-width:158px}
+body.dock-on .cw-fab{bottom:calc(108px + env(safe-area-inset-bottom,0px))}
+@media (max-width:350px){.dock{gap:8px;padding-inline:10px}.dock .dg{gap:6px}.dock .dg .btn-mg{max-width:124px;padding:0 10px;font-size:.8125rem}.dock .p b{font-size:.95rem}.dock .dw{width:44px}}
