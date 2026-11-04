@@ -20,7 +20,7 @@
 window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 (function(){var C=window.EGV_TRACK,live=/(^|\.)elgranviajecito\.com$/.test(location.hostname),on=false,q=[];
  function ck(){try{return localStorage.getItem('egv_ck');}catch(e){return null;}}
- function send(ev,p){var M={view_ficha:['ViewContent','view_item'],click_whatsapp:['Contact','click_whatsapp'],begin_reserva:['InitiateCheckout','begin_checkout'],lead_espera:['Lead','generate_lead'],lead_chat:['Lead','generate_lead'],pago_sena:['AddPaymentInfo','add_payment_info'],page_view:['PageView','page_view']}[ev]||[null,ev];
+ function send(ev,p){var M={view_ficha:['ViewContent','view_item'],click_whatsapp:['Contact','click_whatsapp'],begin_reserva:['InitiateCheckout','begin_checkout'],lead_espera:['Lead','generate_lead'],lead_chat:['Lead','generate_lead'],lead_prereserva:['Lead','generate_lead'],pago_sena:['AddPaymentInfo','add_payment_info'],page_view:['PageView','page_view']}[ev]||[null,ev];
   try{if(window.fbq&&M[0])fbq('track',M[0],{content_name:p.viaje||undefined,value:p.value,currency:p.value?'USD':undefined});}catch(e){}
   try{if(window.gtag)gtag('event',M[1],p);}catch(e){}}
  window.egvTrack=function(ev,p){p=p||{};if(!live){if(window.console)console.log('[egv]',ev,p);return;}if(!on){q.push([ev,p]);return;}send(ev,p);};
@@ -38,7 +38,7 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=DM+Mono:wght@400;500&display=swap"></noscript>
-<link rel="stylesheet" href="/assets/egv.css?v=10">
+<link rel="stylesheet" href="/assets/egv.css?v=11">
 <script>if(Date.now()>=1796094000000)document.documentElement.classList.add("egvpv-fin")</script></head>
 <body>
 <header class="hd"><div class="wrap">
@@ -177,6 +177,6 @@ window.EGV_TRACK={pixel:'166983631414264',ga4:'G-7GQN31LNHP'};
 <p class="cw-note">Respuestas automáticas con la info de la web. Después te sigue uno de nuestros viajeros expertos por WhatsApp.</p>
 <form class="cw-in" id="cwForm"><textarea id="cwTxt" rows="1" placeholder="Escribí tu pregunta…" aria-label="Tu pregunta"></textarea><button type="submit" id="cwSend" aria-label="Enviar"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 11.5 21 3l-8.5 18-2.5-7.5z"/></svg></button></form>
 </section>
-<script src="/assets/egv.js?v=15"></script>
+<script src="/assets/egv.js?v=16"></script>
 </body>
 </html>
