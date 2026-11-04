@@ -233,11 +233,14 @@ try{
 
       /* sellos: caen y se "estampan" */
       var st=q('.stamp');
-      if(st.length){
+      /* en celulares (sobre todo Safari en iPhone) el efecto dejaba los sellos invisibles: ahí se muestran fijos */
+      var chico=window.matchMedia&&matchMedia('(max-width:759px),(pointer:coarse)').matches;
+      if(st.length&&!chico){
         gsap.set(st,{autoAlpha:0,scale:1.7});
         ScrollTrigger.batch(st,{start:'top 88%',once:true,onEnter:function(b){
           gsap.to(b,{autoAlpha:1,scale:1,duration:.55,ease:'back.out(2.2)',stagger:.16});
         }});
+        setTimeout(function(){st.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight&&getComputedStyle(e).opacity==='0')gsap.to(e,{autoAlpha:1,scale:1,duration:.4});});},4000);
       }
       q('.stamps-lede').forEach(function(l){gsap.from(l,{y:30,autoAlpha:0,duration:1,ease:EASE,scrollTrigger:{trigger:l,start:'top 88%',once:true}});});
 

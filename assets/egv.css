@@ -868,3 +868,6 @@ html.egvpv-fin .egv-pill.egvpv-off{display:inline-flex!important}
 .dock .dg .btn-mg{padding:0 16px;font-size:.875rem;line-height:1.15;text-align:center;white-space:normal;max-width:158px}
 body.dock-on .cw-fab{bottom:calc(108px + env(safe-area-inset-bottom,0px))}
 @media (max-width:350px){.dock{gap:8px;padding-inline:10px}.dock .dg{gap:6px}.dock .dg .btn-mg{max-width:124px;padding:0 10px;font-size:.8125rem}.dock .p b{font-size:.95rem}.dock .dw{width:44px}}
+
+/* celulares: sellos sin mezcla (Safari en iPhone los dejaba invisibles) */
+@media (max-width:759px),(pointer:coarse){.stamp{mix-blend-mode:normal}}
