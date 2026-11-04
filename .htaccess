@@ -57,6 +57,14 @@ RewriteRule ^tour_destination/bali/?$ /viajes/indonesia-malasia-singapur/ [R=301
 RewriteRule ^tour_destination/indonesia/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
 RewriteRule ^tour_destination/indonesia\-2/?$ /viajes/indonesia-malasia-singapur/ [R=301,L]
 RewriteRule ^tour_destination/tailandia\-camboya/?$ /viajes/tailandia-camboya/ [R=301,L]
+# Guías dadas de baja (enseñaban a viajar por libre): a la ficha del viaje
+RewriteRule ^guias/egipto/egipto\-por\-libre\-o\-con\-agencia/?$ /viajes/egipto/ [R=301,L]
+RewriteRule ^guias/egipto/cuanto\-cuesta\-viajar\-a\-egipto/?$ /viajes/egipto/ [R=301,L]
+RewriteRule ^guias/japon/cuanto\-cuesta\-viajar\-a\-japon/?$ /viajes/japon/ [R=301,L]
+RewriteRule ^guias/japon/japon\-en\-13\-dias\-itinerario/?$ /viajes/japon/ [R=301,L]
+RewriteRule ^guias/tailandia/cuanto\-cuesta\-viajar\-a\-tailandia/?$ /viajes/tailandia-camboya/ [R=301,L]
+RewriteRule ^guias/indonesia/cuanto\-cuesta\-viajar\-a\-bali/?$ /viajes/bali-relax/ [R=301,L]
+RewriteRule ^guias/peru/peru\-en\-12\-dias\-itinerario/?$ /viajes/peru/ [R=301,L]
 # resto de URLs viejas (etiquetas, categorías, tienda): a la sección más cercana
 RewriteRule ^(tag|blog|category)(/.*)?$ /guias/ [R=301,L]
 RewriteRule ^(tour_tag|tour_category|tour_destination|tour_includes|etiqueta-producto|categoria-producto|tour-single|tienda|micarrito|reservaconfirmada)(/.*)?$ /viajes/ [R=301,L]
