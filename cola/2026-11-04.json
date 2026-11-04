@@ -26,26 +26,6 @@
   "graduacion": "MANUAL"
  },
  {
-  "id": "egi_nrain",
-  "hora": "18:00",
-  "viaje": "Egipto Total",
-  "tipo": "reel_prueba",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain_m.mp4",
-  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
-  "portada_ms": 1500,
-  "graduacion": "MANUAL"
- },
- {
-  "id": "tan_toggle",
-  "hora": "18:30",
-  "viaje": "Tanzania y Zanzíbar",
-  "tipo": "reel_prueba",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle_m.mp4",
-  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
-  "portada_ms": 1500,
-  "graduacion": "MANUAL"
- },
- {
   "id": "feed_oficial_tailandia",
   "hora": "19:00",
   "tipo": "reel",
@@ -70,19 +50,39 @@
   "texto": "Toda madre tiene este chat 😅 \"Hija, ¿dónde estás?\" Avisale a tu mamá: nos vamos.\n\nIndonesia, Malasia y Singapur: reservá antes del 30/11 y pagás USD 2.890 + aéreo (después USD 2.990).\nLink en la bio.\n\n#humorviajero #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
  },
  {
+  "id": "s4_testi2",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi2.mp4"
+ },
+ {
+  "id": "egi_nrain",
+  "hora": "22:00",
+  "viaje": "Egipto Total",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain_m.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
+  "id": "tan_toggle",
+  "hora": "22:20",
+  "viaje": "Tanzania y Zanzíbar",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle_m.mp4",
+  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
   "id": "bal_relax",
-  "hora": "19:00",
+  "hora": "22:40",
   "viaje": "Bali Relax",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_relax.mp4",
   "texto": "¿Y si bajás un cambio en Bali? 15 días a ritmo lento por Bali y las islas Gili, en julio 2027. Preventa hasta el 30/11. Seguinos en @elgranviajecito 🌴 #bali #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
- },
- {
-  "id": "s4_testi2",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi2.mp4"
  }
 ]
