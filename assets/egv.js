@@ -558,7 +558,7 @@ try{
 /* 1/11/2026 preventa: hasta el 30/11 23:59 UY los reels completos de las fichas muestran la versión con la placa "Reservá antes del 30/11". Después vuelven solos a los de siempre. */
 (function(){
   if(document.documentElement.classList.contains('egvpv-fin'))return;
-  var M={reel_bali2:1,reel_egipto:1,reel_filipinas:1,reel_india3:1,reel_indonesia:1,reel_japon:1,reel_sri2:'reel_sri',reel_sri3:1,reel_tailandia3:1,reel_tanzania2:'reel_tanzania',reel_testimonios2:1};
+  var M={reel_bali2:1,reel_egipto:1,reel_filipinas:1,reel_india3:1,reel_indonesia:1,reel_japon:1,reel_sri2:'reel_sri',reel_sri3:1,reel_tailandia3:1,reel_tanzania2:'reel_tanzania',reel_testimonios2:1,reel_testimonios3a:1,reel_testimonios3b:1,reel_testimonios3c:1};
   document.querySelectorAll('[data-src]').forEach(function(el){
     var m=/\/video\/(reel_[a-z0-9]+)\.mp4/.exec(el.getAttribute('data-src')||'');
     if(!m||!M[m[1]])return;
@@ -587,3 +587,8 @@ function go(){k=(k+1)%n;show(k);}
 function start(){clearInterval(t);t=setInterval(go,7000);}
 rv.addEventListener('mouseenter',function(){clearInterval(t);});rv.addEventListener('mouseleave',start);
 start();})();
+
+/* 4/11/2026 Opiniones del inicio: el video de testimonios rota entre los 4 (al terminar pasa al siguiente; los botones eligen uno) */
+(function(){document.querySelectorAll('.op-v[data-pl]').forEach(function(w){var v=w.querySelector('video'),L=JSON.parse(w.getAttribute('data-pl')),b=(w.nextElementSibling&&w.nextElementSibling.classList.contains('op-pl'))?w.nextElementSibling.querySelectorAll('button'):[],i=0;
+function set(n,play){i=(n+L.length)%L.length;var fin=document.documentElement.classList.contains('egvpv-fin');v.poster=L[i].p;v.src=(!fin&&L[i].pv)?L[i].pv:L[i].v;b.forEach(function(x,k){x.setAttribute('aria-pressed',k===i?'true':'false');});if(play){var r=v.play();if(r&&r.catch)r.catch(function(){});}}
+b.forEach(function(x,k){x.addEventListener('click',function(){set(k,true);});});v.addEventListener('ended',function(){set(i+1,true);});set(0,false);});})();

@@ -779,3 +779,6 @@ html.egvpv-fin .egvpv-off{display:inline!important}
 .pcs .rv.duo .rc.c1{grid-column:1}.pcs .rv.duo .rc.c2{grid-column:2;transition-delay:.15s}
 .pcs .rv.duo .rc.on{opacity:1;visibility:visible;translate:0 0}
 @media (max-width:700px){.pcs .rv.duo{grid-template-columns:1fr}.pcs .rv.duo .rc.c2{grid-column:1;grid-row:2}}
+
+/* 4/11/2026 selector de videos de testimonios en Opiniones del inicio */
+.op-pl{display:flex;gap:8px;margin-top:12px;max-width:320px}.op-pl button{flex:1 1 0;min-width:0;aspect-ratio:9/16;max-width:72px;border:2px solid transparent;border-radius:10px;padding:0;background:#1c1424 center/cover no-repeat;cursor:pointer;opacity:.7}.op-pl button[aria-pressed="true"]{border-color:#f62085;opacity:1}
