@@ -6,6 +6,16 @@
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_bali_v2.mp4"
  },
  {
+  "id": "bal_angel",
+  "hora": "17:00",
+  "viaje": "Bali Relax",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_angel_m.mp4",
+  "texto": "Y es real. Ubud, Canggu y las Gili en julio 2027, en grupo. Comentá INFO y te mando el itinerario. #bali #viajesengrupo #indonesia",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
   "id": "s8_amiga",
   "hora": "21:00",
   "tipo": "historia",
