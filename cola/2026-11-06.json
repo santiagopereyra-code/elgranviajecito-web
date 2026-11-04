@@ -6,7 +6,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_toggle.mp4",
   "texto": "Activada hasta el 30/11. Indonesia, Malasia y Singapur, 18 días. Comentá INDONESIA y te mando el itinerario. #indonesia #viajesengrupo",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "bal_vlog",
@@ -15,7 +16,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_vlog.mp4",
   "texto": "Así es Bali Relax: arrozales, templos, cascadas y Tanah Lot. Julio 2027. Comentá BALI y te mando el itinerario. #bali #viajesengrupo",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "fil_navidad",
@@ -24,7 +26,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_navidad.mp4",
   "texto": "Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #filipinas #viajesengrupo",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "tai_bateria",
@@ -33,7 +36,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_bateria.mp4",
   "texto": "Recarga completa: Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #humorviajero #tailandia",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "egi_vlog",
@@ -42,7 +46,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_vlog.mp4",
   "texto": "Giza y Saqqara en Egipto Total, abril 2027. Comentá EGIPTO y te mando el itinerario. #egipto #viajesengrupo",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "tan_nrain",
@@ -51,7 +56,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_nrain.mp4",
   "texto": "Lo que se reserva en noviembre se vive en septiembre. Safari y Zanzíbar, 13 días. Comentá TANZANIA y te mando el itinerario. #safari #tanzania",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "ims_pelicula",
@@ -60,7 +66,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_pelicula.mp4",
   "texto": "Indonesia, Malasia y Singapur, junio 2027. Comentá INDONESIA y te mando el itinerario. #indonesia #singapur",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "bal_roles",
@@ -69,7 +76,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_roles.mp4",
   "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Bali Relax, julio 2027. Comentá BALI y te mando el itinerario. #humorviajero #bali",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "fil_empezo",
@@ -78,7 +86,8 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_empezo.mp4",
   "texto": "Llegás sin conocer a nadie y te volvés con amigos. Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #viajarsolo #filipinas",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  },
  {
   "id": "tai_reservas",
@@ -87,6 +96,7 @@
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_reservas.mp4",
   "texto": "Tailandia y Camboya, 16 días en octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #camboya",
-  "portada_ms": 1500
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
  }
 ]
