@@ -114,15 +114,15 @@ def wa(k):
     return reel(f'feed_wa_{k}', f'wa_{k}.mp4', f"{g}\n\n{v}: reservá antes del 30/11 y pagás USD {p} + aéreo (después USD {l}).\nLink en la bio.\n\n#humorviajero {HT}")
 
 TESTI = "Lo cuentan ellos 💬 Llegaron sin conocerse y volvieron con amigos.\n\nPreventa hasta el 30/11: USD 100 menos en todos los viajes 2027 (+ aéreo).\nLink en la bio o escribinos por WhatsApp.\n\n#viajesengrupo #viajarsolo #viajarsola #elgranviajecito #testimonios"
-# Feed: de a 3 por día solo 5, 6 y 7/11 (pedido de Santiago 04/11 05:12). Stories: 2 por día (13:00 y 21:00).
+# Feed: de a 3 por día solo 4, 5 y 6/11 (pedido de Santiago 04/11 05:16). Stories: 2 por día (13:00 y 21:00).
 # Las stories con link a artículos van a mano (la API de Instagram no permite el sticker de link): ver CALENDARIO.
 DIAS = {
- '2026-11-04': [('13:00', hist('h4_1', 'story_01_pasaje_vacaciones.jpg')), ('21:00', hist('h4_2', 'cta_tailandia_camboya.jpg'))],
+ '2026-11-04': [('19:00', car('car_tailandia', 'tailandia2', T['tailandia'])), ('19:00', reel('feed_testi3b', 'feed_testi3b.mp4', TESTI)), ('19:00', wa('mama')),
+                ('13:00', hist('h4_1', 'story_01_pasaje_vacaciones.jpg')), ('21:00', hist('h4_2', 'cta_tailandia_camboya.jpg'))],
  '2026-11-05': [('13:00', hist('h5_1', 'story_04_fotografo.jpg'))],
- '2026-11-06': [('19:00', car('car_tailandia', 'tailandia', T['tailandia'])), ('19:00', reel('feed_testi3b', 'feed_testi3b.mp4', TESTI)), ('19:00', wa('mama')),
-                ('13:00', hist('h6_1', 'story_02_ahorrar.jpg')), ('21:00', hist('h6_2', 'cta_indonesia.jpg'))],
- '2026-11-07': [('19:00', car('car_filipinas', 'filipinas', T['filipinas'])), ('19:00', reel('feed_testi3c', 'feed_testi3c.mp4', TESTI)), ('19:00', car('car_sobre', 'sobre', T['sobre'], 'jpg')),
-                ('13:00', hist('h7_1', 'story_09_valijas.jpg'))],
+ '2026-11-06': [('19:00', car('car_filipinas', 'filipinas', T['filipinas'])), ('19:00', reel('feed_testi3c', 'feed_testi3c.mp4', TESTI)), ('19:00', car('car_sobre', 'sobre', T['sobre'], 'jpg')),
+                ('13:00', hist('h6_1', 'story_02_ahorrar.jpg')), ('21:00', hist('h6_2', 'cta_filipinas_vietnam.jpg'))],
+ '2026-11-07': [('13:00', hist('h7_1', 'story_09_valijas.jpg'))],
  '2026-11-08': [('13:00', hist('h8_1', 'story_13_depre.jpg')), ('21:00', hist('h8_2', 'cta_bali_relax.jpg'))],
  '2026-11-09': [('13:00', hist('h9_1', 'story_14_amigo_vamos.jpg'))],
  '2026-11-10': [('13:00', hist('h10_1', 'story_08_mas_feliz.jpg')), ('21:00', hist('h10_2', 'cta_egipto.jpg'))],
