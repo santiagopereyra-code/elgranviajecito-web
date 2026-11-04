@@ -596,19 +596,19 @@ b.forEach(function(x,k){x.addEventListener('click',function(){set(k,true);});});
   function txt(a){try{return decodeURIComponent((a.getAttribute('href').split('text=')[1]||'').replace(/\+/g,' '))}catch(e){return ''}}
   function propio(){ // mensaje específico de la página, si existe
     var as=document.querySelectorAll('a[href*="wa.me"]');
-    for(var i=0;i<as.length;i++){var t=txt(as[i]);if(/^Hola! (Quiero info de|Leí )/.test(t))return t;}
+    for(var i=0;i<as.length;i++){var t=txt(as[i]);if(/^Hola! (Quiero charlar sobre el viaje a|Quiero info de|Leí )/.test(t))return t;}
     return '';
   }
   var esp=propio(),m=location.pathname.match(/^\/viajes\/([^\/]+)\/$/);
-  if(m&&esp){var n=esp.replace(/^Hola! Quiero info de /,'').replace(/ \(web\)$/,'');
+  if(m&&esp){var n=esp.replace(/^Hola! Quiero charlar sobre el viaje a /,'').replace(/ \(web\)$/,'');
     try{var v=leer().filter(function(x){return x!==n});v.unshift(n);localStorage.setItem(K,JSON.stringify(v.slice(0,4)))}catch(e){}}
   function mensaje(){
     if(location.pathname.indexOf('/reservar')===0){var s=document.querySelector('select[name="viaje"],#viaje');var o=s&&s.options&&s.options[s.selectedIndex];
-      if(o&&o.value)return 'Hola! Estoy por aplicar para reservar lugar en '+o.textContent.trim()+' y tengo una consulta (web)';}
+      if(o&&o.value)return 'Hola! Estoy por aplicar para reservar lugar en '+o.textContent.trim()+' y quiero charlar sobre el viaje (web)';}
     if(esp)return esp;
     var v=leer();
-    if(v.length)return 'Hola! Estoy mirando los viajes 2027 en la web. Me interesa'+(v.length>1?'n':'')+': '+v.join(' · ')+' (web)';
-    return 'Hola! Estoy mirando los viajes 2027 en la web y me interesa el viaje a: ';
+    if(v.length)return 'Hola! Estoy mirando los viajes 2027 en la web y quiero charlar sobre '+(v.length>1?'estos viajes: ':'el viaje a ')+v.join(' · ')+' (web)';
+    return 'Hola! Estoy mirando los viajes 2027 en la web y quiero charlar sobre el viaje a: ';
   }
   function fix(a){var t=txt(a);if(!GEN.test(t))return;var base=a.getAttribute('href').split('?')[0];a.setAttribute('href',base+'?text='+encodeURIComponent(mensaje()));}
   document.querySelectorAll('a[href*="wa.me"]').forEach(fix);
