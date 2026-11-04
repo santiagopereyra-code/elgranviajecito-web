@@ -1,18 +1,21 @@
 name: Publicador de Instagram
-# Publica la cola del día de @elgranviajecito (rama "publicador"), un ítem por corrida.
+# Publica la cola del día de @elgranviajecito (rama "publicador").
+# GitHub demora horas los cron, así que cada corrida queda viva ~5h50m revisando la cola cada 2 min
+# (deja al menos 20 min entre publicaciones) y al terminar se vuelve a lanzar sola.
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: publicador-instagram
   cancel-in-progress: false
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,19 +23,32 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Publicar lo que toca
+      - name: Publicar lo que toca (bucle)
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           TOPE_PRUEBA_DIA: "18"
-        run: node publicador.mjs
-      - name: Guardar estado
         run: |
-          if [ -n "$(git status --porcelain estado)" ]; then
-            git config user.name "publicador-egv"
-            git config user.email "publicador@users.noreply.github.com"
-            git add estado
-            git commit -m "estado $(TZ=America/Montevideo date +%F_%H:%M)"
-            git pull --rebase origin publicador
-            git push origin HEAD:publicador
-          fi
+          git config user.name "publicador-egv"
+          git config user.email "publicador@users.noreply.github.com"
+          inicio=$(date +%s); ultimo=0
+          while [ $(( $(date +%s) - inicio )) -lt 20700 ]; do
+            git pull -q --rebase origin publicador || true
+            if [ $(( $(date +%s) - ultimo )) -ge 1200 ]; then
+              antes=$(cat estado/*.json 2>/dev/null | grep -c '"ok": true' || true)
+              node publicador.mjs || true
+              if [ -n "$(git status --porcelain estado)" ]; then
+                despues=$(cat estado/*.json 2>/dev/null | grep -c '"ok": true' || true)
+                [ "$despues" -gt "$antes" ] && ultimo=$(date +%s)
+                git add estado
+                git commit -qm "estado $(TZ=America/Montevideo date +%F_%H:%M)"
+                git pull -q --rebase origin publicador && git push -q origin HEAD:publicador || true
+              fi
+            fi
+            sleep 120
+          done
+      - name: Relanzar
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publicador-instagram.yml --ref main -R ${{ github.repository }}
