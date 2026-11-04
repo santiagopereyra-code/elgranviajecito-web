@@ -76,7 +76,20 @@ async function publicar(IG, item) {
 
 const { fecha, hora } = ahoraUY();
 const fCola = `cola/${fecha}.json`, fEst = `estado/${fecha}.json`;
-if (!fs.existsSync(fCola)) { console.log(`Sin cola para ${fecha}`); process.exit(0); }
+if (!fs.existsSync(fCola)) {
+  // Día sin cola: solo se verifica que el token sirva (no publica nada) y se anota en estado/token.json.
+  const chk = { fecha, hora };
+  try {
+    const IG = await igUserId();
+    const u = await graph(IG, { fields: 'username' }, 'GET');
+    const lim = await graph(`${IG}/content_publishing_limit`, { fields: 'quota_usage,config' }, 'GET');
+    Object.assign(chk, { ok: true, cuenta: u.username, publicaciones_24h: lim.data?.[0]?.quota_usage ?? null });
+  } catch (e) { Object.assign(chk, { ok: false, error: e.message }); }
+  fs.mkdirSync('estado', { recursive: true });
+  fs.writeFileSync('estado/token.json', JSON.stringify(chk, null, 1));
+  console.log(`Sin cola para ${fecha}. Token:`, JSON.stringify(chk));
+  process.exit(0);
+}
 const cola = JSON.parse(fs.readFileSync(fCola, 'utf8'));
 const est = fs.existsSync(fEst) ? JSON.parse(fs.readFileSync(fEst, 'utf8')) : {};
 const pruebasHoy = Object.entries(est).filter(([id, e]) => e.ok && cola.find((c) => c.id === id)?.tipo === 'reel_prueba').length;
