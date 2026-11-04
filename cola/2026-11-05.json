@@ -32,7 +32,7 @@
   "viaje": "Filipinas y Vietnam",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_angel.mp4",
-  "texto": "Y es real. Palawan, Filipinas y Vietnam en febrero 2028. Comentá FILIPINAS y te mando el itinerario. #filipinas #palawan #viajesengrupo",
+  "texto": "Y es real. Palawan, Filipinas y Vietnam en febrero 2028. Comentá INFO y te mando el itinerario. #filipinas #palawan #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -42,15 +42,15 @@
   "viaje": "Tailandia y Camboya",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_navidad.mp4",
-  "texto": "El regalo de este año: 16 días en Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #viajesengrupo",
+  "texto": "El regalo de este año: 16 días en Tailandia y Camboya, octubre 2027. Comentá INFO y te mando el itinerario. #tailandia #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
  {
-  "id": "h5_1",
+  "id": "s5_grupo_tan",
   "hora": "13:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_04_fotografo.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_tanzania.mp4"
  },
  {
   "id": "egi_nrain",
@@ -58,7 +58,7 @@
   "viaje": "Egipto Total",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain.mp4",
-  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá EGIPTO y te mando el itinerario. #egipto #viajesengrupo",
+  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -68,7 +68,7 @@
   "viaje": "Tanzania y Zanzíbar",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle.mp4",
-  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá TANZANIA y te mando el itinerario. #safari #tanzania",
+  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -88,7 +88,7 @@
   "viaje": "Indonesia, Malasia y Singapur",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_reservas.mp4",
-  "texto": "Singapur, Malasia, Komodo, Gili y Bali en 18 días. Comentá INDONESIA y te mando el itinerario. #indonesia #viajesengrupo",
+  "texto": "Singapur, Malasia, Komodo, Gili y Bali en 18 días. Comentá INFO y te mando el itinerario. #indonesia #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -98,7 +98,7 @@
   "viaje": "Filipinas y Vietnam",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_bateria.mp4",
-  "texto": "Recarga completa: Filipinas y Vietnam, febrero 2028. Comentá FILIPINAS y te mando el itinerario. #humorviajero #filipinas",
+  "texto": "Recarga completa: Filipinas y Vietnam, febrero 2028. Comentá INFO y te mando el itinerario. #humorviajero #filipinas",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -108,7 +108,7 @@
   "viaje": "Tailandia y Camboya",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_pelicula.mp4",
-  "texto": "Tailandia y Camboya, octubre 2027. Comentá TAILANDIA y te mando el itinerario. #tailandia #viajesengrupo",
+  "texto": "Tailandia y Camboya, octubre 2027. Comentá INFO y te mando el itinerario. #tailandia #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -118,7 +118,7 @@
   "viaje": "Egipto Total",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_roles.mp4",
-  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Egipto Total, abril 2027. Comentá EGIPTO y te mando el itinerario. #humorviajero #egipto",
+  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Egipto Total, abril 2027. Comentá INFO y te mando el itinerario. #humorviajero #egipto",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
  },
@@ -128,8 +128,14 @@
   "viaje": "Tanzania y Zanzíbar",
   "tipo": "reel_prueba",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_empezo.mp4",
-  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Tanzania y Zanzíbar, septiembre 2027. Comentá TANZANIA y te mando el itinerario. #viajarsolo #safari",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Tanzania y Zanzíbar, septiembre 2027. Comentá INFO y te mando el itinerario. #viajarsolo #safari",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
+ },
+ {
+  "id": "s5_cuota",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_cuota.mp4"
  }
 ]

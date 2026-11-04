@@ -1,14 +1,14 @@
 [
  {
-  "id": "h8_1",
+  "id": "s8_bali",
   "hora": "13:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_13_depre.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_bali_v2.mp4"
  },
  {
-  "id": "h8_2",
+  "id": "s8_amiga",
   "hora": "21:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/cta_bali_relax.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_amiga_tailandia.mp4"
  }
 ]

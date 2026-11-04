@@ -1,32 +1,11 @@
 [
  {
-  "id": "car_tailandia",
+  "id": "feed_oficial_tailandia",
   "hora": "19:00",
-  "tipo": "carrusel",
-  "items": [
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide1.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide2.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide3.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide4.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide5.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide6.mp4"
-   },
-   {
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/tailandia2/slide7.mp4"
-   }
-  ],
-  "texto": "Bangkok, Angkor Wat, Chiang Mai, Chiang Rai, Phuket y Phi Phi en un solo viaje 🛶\n\n1️⃣ Wat Arun al atardecer en Bangkok\n2️⃣ Amanecer en Angkor Wat\n3️⃣ Templos de Chiang Mai\n4️⃣ Templo Blanco en Chiang Rai\n5️⃣ Una noche en Phuket\n6️⃣ Cinco noches en Phi Phi, con lancha a Maya Bay\n\nTailandia y Camboya · 16 días · salida 17 oct 2027 · grupos de 8 a 15.\nPreventa hasta el 30/11: USD 2.790 + aéreo (después USD 2.890).\nComentá TAILANDIA y te mando el itinerario completo.\n\n#tailandia #camboya #angkorwat #phiphi #chiangmai #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_tailandia_v2.mp4",
+  "portada_ms": 1500,
+  "texto": "Video oficial · Tailandia y Camboya 🇹🇭🇰🇭\n\nBangkok, Angkor Wat, Chiang Mai, Chiang Rai, Phuket y Phi Phi, en grupo de 8 a 15 viajeros.\n16 días · salida 17 oct 2027.\n\nPreventa hasta el 30/11: USD 2.790 + aéreo (después USD 2.890).\nComentá INFO y te mando el itinerario, o aplicá para reservar tu lugar desde el link de la bio.\n\n#tailandia #camboya #angkorwat #phiphi #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
  },
  {
   "id": "feed_testi3b",
@@ -45,15 +24,15 @@
   "texto": "Toda madre tiene este chat 😅 \"Hija, ¿dónde estás?\" Avisale a tu mamá: nos vamos.\n\nIndonesia, Malasia y Singapur: reservá antes del 30/11 y pagás USD 2.890 + aéreo (después USD 2.990).\nLink en la bio.\n\n#humorviajero #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
  },
  {
-  "id": "h4_1",
+  "id": "s4_grupo_tai",
   "hora": "13:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_01_pasaje_vacaciones.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_tailandia_camboya.mp4"
  },
  {
-  "id": "h4_2",
+  "id": "s4_testi2",
   "hora": "21:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/cta_tailandia_camboya.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi2.mp4"
  }
 ]

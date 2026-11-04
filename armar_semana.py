@@ -114,19 +114,44 @@ def wa(k):
     return reel(f'feed_wa_{k}', f'wa_{k}.mp4', f"{g}\n\n{v}: reservá antes del 30/11 y pagás USD {p} + aéreo (después USD {l}).\nLink en la bio.\n\n#humorviajero {HT}")
 
 TESTI = "Lo cuentan ellos 💬 Llegaron sin conocerse y volvieron con amigos.\n\nPreventa hasta el 30/11: USD 100 menos en todos los viajes 2027 (+ aéreo).\nLink en la bio o escribinos por WhatsApp.\n\n#viajesengrupo #viajarsolo #viajarsola #elgranviajecito #testimonios"
-# Feed: de a 3 por día solo 4, 5 y 6/11 (pedido de Santiago 04/11 05:16). Stories: 2 por día (13:00 y 21:00).
-# Las stories con link a artículos van a mano (la API de Instagram no permite el sticker de link): ver CALENDARIO.
-DIAS = {
- '2026-11-04': [('19:00', car('car_tailandia', 'tailandia2', T['tailandia'])), ('19:00', reel('feed_testi3b', 'feed_testi3b.mp4', TESTI)), ('19:00', wa('mama')),
-                ('13:00', hist('h4_1', 'story_01_pasaje_vacaciones.jpg')), ('21:00', hist('h4_2', 'cta_tailandia_camboya.jpg'))],
- '2026-11-05': [('13:00', hist('h5_1', 'story_04_fotografo.jpg'))],
- '2026-11-06': [('19:00', car('car_filipinas', 'filipinas', T['filipinas'])), ('19:00', reel('feed_testi3c', 'feed_testi3c.mp4', TESTI)), ('19:00', car('car_sobre', 'sobre', T['sobre'], 'jpg')),
-                ('13:00', hist('h6_1', 'story_02_ahorrar.jpg')), ('21:00', hist('h6_2', 'cta_filipinas_vietnam.jpg'))],
- '2026-11-07': [('13:00', hist('h7_1', 'story_09_valijas.jpg'))],
- '2026-11-08': [('13:00', hist('h8_1', 'story_13_depre.jpg')), ('21:00', hist('h8_2', 'cta_bali_relax.jpg'))],
- '2026-11-09': [('13:00', hist('h9_1', 'story_14_amigo_vamos.jpg'))],
- '2026-11-10': [('13:00', hist('h10_1', 'story_08_mas_feliz.jpg')), ('21:00', hist('h10_2', 'cta_egipto.jpg'))],
+def tx(seccion):
+    t = open('/home/claude/contenido/interaccion/TEXTOS.md').read()
+    t = t[t.index(seccion):]; t = t[t.index('**Caption**') + 11:t.index('**Texto alternativo**')]
+    return t.replace('**', '').strip()
+OF = {
+ 'tailandia': ('Video oficial · Tailandia y Camboya 🇹🇭🇰🇭', 'Bangkok, Angkor Wat, Chiang Mai, Chiang Rai, Phuket y Phi Phi', '16 días · salida 17 oct 2027', '2.790', '2.890', 'TAILANDIA', '#tailandia #camboya #angkorwat #phiphi'),
+ 'filipinas': ('Video oficial · Filipinas y Vietnam 🇵🇭🇻🇳', 'Hanói, Ha Long, Ninh Binh, río subterráneo, Port Barton y El Nido', '16 días · salida 5 feb 2028', '2.890', '2.990', 'FILIPINAS', '#filipinas #vietnam #elnido #halongbay'),
+ 'indonesia': ('Video oficial · Indonesia, Malasia y Singapur 🇮🇩🇲🇾🇸🇬', 'Singapur, Kuala Lumpur, Komodo en barco, Gili Trawangan y Bali', '18 días · salida 3 jun 2027', '2.890', '2.990', 'INDONESIA', '#indonesia #bali #komodo #singapur'),
 }
+def oficial(k):
+    t, lug, f, p, l, kw, h = OF[k]
+    return reel(f'feed_oficial_{k}', f'feed_{k}_v2.mp4', f"{t}\n\n{lug}, en grupo de 8 a 15 viajeros.\n{f}.\n\n{PV}: USD {p} + aéreo (después USD {l}).\nComentá {kw} y te mando el itinerario, o aplicá para reservar tu lugar desde el link de la bio.\n\n{h} {HT}")
+def sv(id, archivo):
+    return {'id': id, 'tipo': 'historia', 'video': B + f'cola/v/{archivo}', '_f': [f'cola/v/{archivo}']}
+# Feed: 3 por día del 4 al 7/11, cada día el video oficial de un viaje (el 5/11 es Tanzania con los 5 grandes).
+# Stories: 2 por día (13:00 y 21:00) intercalando chats de grupo, testimonios, chats (mamá, jefe…) y videos de viaje.
+# Las stories con link a artículos van a mano (la API no permite el sticker de link).
+DIAS = {
+ '2026-11-04': [('19:00', oficial('tailandia')), ('19:00', reel('feed_testi3b', 'feed_testi3b.mp4', TESTI)), ('19:00', wa('mama')),
+                ('13:00', sv('s4_grupo_tai', 'st_grupo_tailandia_camboya.mp4')), ('21:00', sv('s4_testi2', 'feed_testi2.mp4'))],
+ '2026-11-05': [('13:00', sv('s5_grupo_tan', 'st_grupo_tanzania.mp4')), ('21:00', sv('s5_cuota', 'wa_cuota.mp4'))],
+ '2026-11-06': [('19:00', oficial('filipinas')), ('19:00', car('car_sobre', 'sobre', T['sobre'], 'jpg')), ('19:00', car('car_zoom', 'zoom', T['zoom'], 'jpg')),
+                ('13:00', sv('s6_grupo_fil', 'st_grupo_filipinas_vietnam.mp4')), ('21:00', sv('s6_vas_sola', 'wa_vas_sola.mp4'))],
+ '2026-11-07': [('19:00', oficial('indonesia')), ('19:00', car('car_borroso', 'borroso', T['borroso'], 'jpg')), ('19:00', wa('carrasco')),
+                ('13:00', sv('s7_grupo_ims', 'st_grupo_indonesia.mp4')), ('21:00', sv('s7_testi3c', 'feed_testi3c.mp4'))],
+ '2026-11-08': [('13:00', sv('s8_bali', 'feed_bali_v2.mp4')), ('21:00', sv('s8_amiga', 'wa_amiga_tailandia.mp4'))],
+ '2026-11-09': [('13:00', sv('s9_grupo_egi', 'st_grupo_egipto.mp4')), ('21:00', sv('s9_2019', 'wa_grupo_2019.mp4'))],
+ '2026-11-10': [('13:00', sv('s10_india', 'feed_india_v2.mp4')), ('21:00', sv('s10_grupo_bali', 'wa_grupo_bali.mp4'))],
+}
+# ManyChat responde la palabra INFO en comentarios (tema "auto" busca el viaje en el texto): todos los CTA de comentario usan INFO.
+import re as _re
+def _kw(t):
+    t = _re.sub(r'Comentá (TAILANDIA|INDIA|FILIPINAS|INDONESIA|BALI|EGIPTO|TANZANIA|JAPON|JAPÓN|PREVENTA)\b', 'Comentá INFO', t)
+    t = t.replace('comentá TIPO + tu letra (ej: TIPO B)', 'comentá INFO + tu letra (ej: INFO B)')
+    return t
+for _d in DIAS.values():
+    for _h, _it in _d:
+        if 'texto' in _it: _it['texto'] = _kw(_it['texto'])
 faltan = []
 for dia, its in DIAS.items():
     f = f'cola/{dia}.json'
@@ -147,6 +172,8 @@ for dia, its in DIAS.items():
         feed = [x for x in cola if x['tipo'] not in ('reel_prueba', 'historia')]
         resto = [x for x in cola if x['tipo'] in ('reel_prueba', 'historia')]
     # feed primero (prioridad a las 19:00, en orden), después historias y reels de prueba por hora
+    for _x in feed + resto:
+        if 'texto' in _x: _x['texto'] = _kw(_x['texto'])
     out = feed + nuevos_feed + sorted(resto + nuevas_h, key=lambda x: x['hora'])
     json.dump(out, open(f, 'w'), ensure_ascii=False, indent=1)
     print(dia, len(out), [x['id'] for x in out if x['tipo'] != 'reel_prueba'])

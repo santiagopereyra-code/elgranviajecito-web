@@ -1,8 +1,14 @@
 [
  {
-  "id": "h9_1",
+  "id": "s9_grupo_egi",
   "hora": "13:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_14_amigo_vamos.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_egipto.mp4"
+ },
+ {
+  "id": "s9_2019",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_2019.mp4"
  }
 ]

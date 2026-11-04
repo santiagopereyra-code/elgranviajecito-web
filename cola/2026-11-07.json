@@ -1,8 +1,56 @@
 [
  {
-  "id": "h7_1",
+  "id": "feed_oficial_indonesia",
+  "hora": "19:00",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_indonesia_v2.mp4",
+  "portada_ms": 1500,
+  "texto": "Video oficial · Indonesia, Malasia y Singapur 🇮🇩🇲🇾🇸🇬\n\nSingapur, Kuala Lumpur, Komodo en barco, Gili Trawangan y Bali, en grupo de 8 a 15 viajeros.\n18 días · salida 3 jun 2027.\n\nPreventa hasta el 30/11: USD 2.890 + aéreo (después USD 2.990).\nComentá INFO y te mando el itinerario, o aplicá para reservar tu lugar desde el link de la bio.\n\n#indonesia #bali #komodo #singapur #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
+ },
+ {
+  "id": "car_borroso",
+  "hora": "19:00",
+  "tipo": "carrusel",
+  "items": [
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide1.jpg"
+   },
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide2.jpg"
+   },
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide3.jpg"
+   },
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide4.jpg"
+   },
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide5.jpg"
+   },
+   {
+    "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/c/borroso/slide6.jpg"
+   }
+  ],
+  "texto": "De borroso a claro: ¿adivinás dónde estamos? 🔍\n\nCada foto se ve un poco más. Comentá tu respuesta en la primera pista que te dé la certeza 👇\n\nPreventa hasta el 30/11: USD 100 menos en todos los viajes 2027 (+ aéreo). Link en la bio.\n\n#adivinaeldestino #quizviajero #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
+ },
+ {
+  "id": "feed_wa_carrasco",
+  "hora": "19:00",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_carrasco.mp4",
+  "portada_ms": 1500,
+  "texto": "Día de salida en la puerta 7 ✈️ Vos traé el mate, nosotros el resto. Etiquetá a quien trae 3 valijas.\n\nEgipto Total: reservá antes del 30/11 y pagás USD 2.590 + aéreo (después USD 2.690).\nLink en la bio.\n\n#humorviajero #viajesengrupo #viajarsola #viajarsolo #elgranviajecito"
+ },
+ {
+  "id": "s7_grupo_ims",
   "hora": "13:00",
   "tipo": "historia",
-  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_09_valijas.jpg"
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_indonesia.mp4"
+ },
+ {
+  "id": "s7_testi3c",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi3c.mp4"
  }
 ]
