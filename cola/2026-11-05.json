@@ -47,6 +47,12 @@
   "graduacion": "MANUAL"
  },
  {
+  "id": "h5_1",
+  "hora": "13:00",
+  "tipo": "historia",
+  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_04_fotografo.jpg"
+ },
+ {
   "id": "egi_nrain",
   "hora": "14:00",
   "viaje": "Egipto Total",

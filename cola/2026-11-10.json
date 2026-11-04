@@ -1,0 +1,14 @@
+[
+ {
+  "id": "h10_1",
+  "hora": "13:00",
+  "tipo": "historia",
+  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/story_08_mas_feliz.jpg"
+ },
+ {
+  "id": "h10_2",
+  "hora": "21:00",
+  "tipo": "historia",
+  "imagen": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/s/cta_egipto.jpg"
+ }
+]
