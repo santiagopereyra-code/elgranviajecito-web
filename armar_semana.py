@@ -31,11 +31,11 @@ Tailandia y Camboya · 16 días · salida 17 oct 2027 · grupos de 8 a 15.
 Comentá TAILANDIA y te mando el itinerario completo.
 
 #tailandia #camboya #angkorwat #phiphi #chiangmai {HT}"""
-T['india'] = f"""De Delhi a Katmandú, por tierra y en plena fiesta de Tihar 🛺
+T['india'] = f"""De Delhi a Katmandú, por tierra y con el cielo limpio del Himalaya 🛺
 
 Jama Masjid en Delhi, Hawa Mahal en Jaipur, el Taj Mahal al amanecer, el Ganges en Varanasi, Pokhara y la estupa de Boudhanath.
 
-India y Nepal · 15 días · salida 17 oct 2027 · grupos de 8 a 15.
+India y Nepal · 15 días · salida 15 nov 2027 · grupos de 8 a 15.
 {PV}: USD 2.390 + aéreo (después USD 2.490).
 Comentá INDIA y te paso el itinerario.
 
@@ -141,7 +141,7 @@ DIAS = {
                 ('13:00', sv('s7_grupo_ims', 'st_grupo_indonesia.mp4')), ('21:00', sv('s7_testi3c', 'feed_testi3c.mp4'))],
  '2026-11-08': [('13:00', sv('s8_bali', 'feed_bali_v2.mp4')), ('21:00', sv('s8_amiga', 'wa_amiga_tailandia.mp4'))],
  '2026-11-09': [('13:00', sv('s9_grupo_egi', 'st_grupo_egipto.mp4')), ('21:00', sv('s9_2019', 'wa_grupo_2019.mp4'))],
- '2026-11-10': [('13:00', sv('s10_india', 'feed_india_v2.mp4')), ('21:00', sv('s10_grupo_bali', 'wa_grupo_bali.mp4'))],
+ '2026-11-10': [('13:00', sv('s10_india', 'feed_india_v3.mp4')), ('21:00', sv('s10_grupo_bali', 'wa_grupo_bali.mp4'))],
 }
 # ManyChat responde la palabra INFO en comentarios (tema "auto" busca el viaje en el texto): todos los CTA de comentario usan INFO.
 import re as _re
