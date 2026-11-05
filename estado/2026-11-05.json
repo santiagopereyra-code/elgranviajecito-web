@@ -26,5 +26,11 @@
   "permalink": "https://www.instagram.com/reel/DfX5S8njxCq/",
   "intentos": 0,
   "hora_real": "17:31"
+ },
+ "tai_pelicula": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "18:02"
  }
 }
