@@ -34,9 +34,10 @@
   "hora_real": "18:06"
  },
  "egi_roles": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18118004927174170",
+  "permalink": "https://www.instagram.com/reel/DfYAeedFFcC/",
   "intentos": 1,
-  "hora_real": "18:31"
+  "hora_real": "18:34"
  }
 }
