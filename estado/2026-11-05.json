@@ -30,7 +30,7 @@
  "tai_pelicula": {
   "ok": false,
   "error": "video: Error: Media upload has failed with error code 2207076",
-  "intentos": 2,
-  "hora_real": "18:04"
+  "intentos": 3,
+  "hora_real": "18:06"
  }
 }
