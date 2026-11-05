@@ -32,5 +32,11 @@
   "error": "video: Error: Media upload has failed with error code 2207076",
   "intentos": 3,
   "hora_real": "18:06"
+ },
+ "egi_roles": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207077",
+  "intentos": 1,
+  "hora_real": "18:31"
  }
 }
