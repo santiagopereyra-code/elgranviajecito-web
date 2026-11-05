@@ -6,6 +6,36 @@
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_egipto.mp4"
  },
  {
+  "id": "egi_nrain",
+  "hora": "17:00",
+  "viaje": "Egipto Total",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain_m.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
+  "id": "tan_toggle",
+  "hora": "17:30",
+  "viaje": "Tanzania y Zanzíbar",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle_m.mp4",
+  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
+  "id": "bal_relax",
+  "hora": "18:00",
+  "viaje": "Bali Relax",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_relax.mp4",
+  "texto": "¿Y si bajás un cambio en Bali? 15 días a ritmo lento por Bali y las islas Gili, en julio 2027. Preventa hasta el 30/11. Seguinos en @elgranviajecito 🌴 #bali #viajesengrupo",
+  "portada_ms": 1500,
+  "graduacion": "MANUAL"
+ },
+ {
   "id": "s9_2019",
   "hora": "21:00",
   "tipo": "historia",
