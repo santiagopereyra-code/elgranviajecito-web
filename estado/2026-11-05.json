@@ -12,5 +12,11 @@
   "permalink": "https://www.instagram.com/stories/elgranviajecito/4023831946165421840",
   "intentos": 0,
   "hora_real": "14:03"
+ },
+ "ims_reservas": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "17:02"
  }
 }
