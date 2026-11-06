@@ -69,9 +69,10 @@
   "hora_real": "19:50"
  },
  "s5_cuota": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207076",
+  "ok": true,
+  "media_id": "18358305001172638",
+  "permalink": "https://www.instagram.com/stories/elgranviajecito/4024043538065180605",
   "intentos": 1,
-  "hora_real": "21:01"
+  "hora_real": "21:03"
  }
 }
