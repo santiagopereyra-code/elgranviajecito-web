@@ -35,9 +35,10 @@
   "hora_real": "18:31"
  },
  "feed_oficial_filipinas": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207076",
+  "ok": true,
+  "media_id": "18392628370163664",
+  "permalink": "https://www.instagram.com/reel/DfapExXjlyD/",
   "intentos": 2,
-  "hora_real": "19:04"
+  "hora_real": "19:07"
  }
 }
