@@ -49,9 +49,10 @@
   "hora_real": "19:28"
  },
  "car_zoom": {
-  "ok": false,
-  "error": "9004/2207052 Only photo or video can be accepted as media type.",
+  "ok": true,
+  "media_id": "18155100040527415",
+  "permalink": "https://www.instagram.com/p/DfauJWvjnoz/",
   "intentos": 1,
-  "hora_real": "19:48"
+  "hora_real": "19:51"
  }
 }
