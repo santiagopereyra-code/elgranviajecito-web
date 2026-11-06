@@ -33,5 +33,11 @@
   "permalink": "https://www.instagram.com/reel/Dfak6vUCLyY/",
   "intentos": 0,
   "hora_real": "18:31"
+ },
+ "feed_oficial_filipinas": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "19:01"
  }
 }
