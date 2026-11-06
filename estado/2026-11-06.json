@@ -47,5 +47,11 @@
   "permalink": "https://www.instagram.com/p/DfargIsjM77/",
   "intentos": 0,
   "hora_real": "19:28"
+ },
+ "car_zoom": {
+  "ok": false,
+  "error": "9004/2207052 Only photo or video can be accepted as media type.",
+  "intentos": 1,
+  "hora_real": "19:48"
  }
 }
