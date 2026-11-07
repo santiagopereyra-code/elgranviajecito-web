@@ -40,5 +40,11 @@
   "permalink": "https://www.instagram.com/reel/DfdNQS7iTHW/",
   "intentos": 0,
   "hora_real": "19:02"
+ },
+ "car_borroso": {
+  "ok": false,
+  "error": "9007/2207027 Media ID is not available",
+  "intentos": 1,
+  "hora_real": "19:22"
  }
 }
