@@ -1,11 +1,5 @@
 [
  {
-  "id": "s9_grupo_egi",
-  "hora": "13:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_egipto.mp4"
- },
- {
   "id": "egi_nrain",
   "hora": "17:00",
   "viaje": "Egipto Total",
@@ -34,11 +28,5 @@
   "texto": "¿Y si bajás un cambio en Bali? 15 días a ritmo lento por Bali y las islas Gili, en julio 2027. Preventa hasta el 30/11. Seguinos en @elgranviajecito 🌴 #bali #viajesengrupo",
   "portada_ms": 1500,
   "graduacion": "MANUAL"
- },
- {
-  "id": "s9_2019",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_2019.mp4"
  }
 ]

@@ -4,11 +4,5 @@
   "hora": "13:00",
   "tipo": "historia",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_india_v3.mp4"
- },
- {
-  "id": "s10_grupo_bali",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_bali.mp4"
  }
 ]
