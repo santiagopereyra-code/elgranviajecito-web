@@ -1,17 +1,30 @@
 [
  {
+  "id": "f_tai_navidad",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_navidad.mp4",
+  "texto": "El regalo de este año: 16 días en Tailandia y Camboya, octubre 2027. Comentá INFO y te mando el itinerario. #tailandia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
   "id": "s8_bali",
   "hora": "13:00",
   "tipo": "historia",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_bali_v2.mp4"
  },
  {
-  "id": "bal_angel",
-  "hora": "17:00",
-  "viaje": "Bali Relax",
+  "id": "feed_japon_v2",
+  "hora": "20:30",
   "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_angel_m.mp4",
-  "texto": "Y es real. Ubud, Canggu y las Gili en julio 2027, en grupo. Comentá INFO y te mando el itinerario. #bali #viajesengrupo #indonesia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_japon_v2.mp4",
+  "texto": "Video oficial · Japón Total 🇯🇵\n\nTokio, Kioto, Nara, Hiroshima y Osaka en 13 días, en grupo de 8 a 15 viajeros. Salida 6 de mayo de 2027. Reservando antes del 30/11 pagás USD 100 menos.\n\nComentá INFO y te mando el itinerario.",
   "portada_ms": 1500
+ },
+ {
+  "id": "s8_testi3a",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi3a.mp4"
  }
 ]

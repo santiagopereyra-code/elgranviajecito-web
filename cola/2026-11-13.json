@@ -1,0 +1,30 @@
+[
+ {
+  "id": "f_fil_bateria",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_bateria.mp4",
+  "texto": "Recarga completa: Filipinas y Vietnam, febrero 2028. Comentá INFO y te mando el itinerario. #humorviajero #filipinas",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s13_indonesia",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_indonesia_v2.mp4"
+ },
+ {
+  "id": "f_tan_nrain",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_nrain.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en septiembre. Safari y Zanzíbar, 13 días. Comentá INFO y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s13_testi3b",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi3b.mp4"
+ }
+]

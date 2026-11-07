@@ -1,0 +1,30 @@
+[
+ {
+  "id": "f_tai_bateria",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_bateria.mp4",
+  "texto": "Recarga completa: Tailandia y Camboya, octubre 2027. Comentá INFO y te mando el itinerario. #humorviajero #tailandia",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s12_filipinas",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_filipinas_v2.mp4"
+ },
+ {
+  "id": "f_ims_toggle",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_toggle.mp4",
+  "texto": "Activada hasta el 30/11. Indonesia, Malasia y Singapur, 18 días. Comentá INFO y te mando el itinerario. #indonesia #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s12_5grandes",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_5grandes.mp4"
+ }
+]

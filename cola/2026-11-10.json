@@ -1,8 +1,30 @@
 [
  {
+  "id": "f_fil_angel",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_angel.mp4",
+  "texto": "Y es real. Palawan, Filipinas y Vietnam en febrero 2028. Comentá INFO y te mando el itinerario. #filipinas #palawan #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
   "id": "s10_india",
   "hora": "13:00",
   "tipo": "historia",
   "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_india_v3.mp4"
+ },
+ {
+  "id": "f_tan_empezo",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_empezo.mp4",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Tanzania y Zanzíbar, septiembre 2027. Comentá INFO y te mando el itinerario. #viajarsolo #safari",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s10_china",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_china_prox.mp4"
  }
 ]

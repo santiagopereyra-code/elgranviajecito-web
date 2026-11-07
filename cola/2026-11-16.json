@@ -1,0 +1,30 @@
+[
+ {
+  "id": "f_fil_navidad",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_navidad.mp4",
+  "texto": "Filipinas y Vietnam, febrero 2028. Comentá INFO y te mando el itinerario. #filipinas #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s16_grupo_egi",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_grupo_egipto.mp4"
+ },
+ {
+  "id": "f_tan_toggle",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle.mp4",
+  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s16_vas_sola",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_vas_sola.mp4"
+ }
+]

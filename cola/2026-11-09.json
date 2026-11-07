@@ -1,29 +1,30 @@
 [
  {
-  "id": "egi_nrain",
-  "hora": "17:00",
-  "viaje": "Egipto Total",
+  "id": "f_ims_reservas",
+  "hora": "10:30",
   "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain_m.mp4",
-  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_reservas.mp4",
+  "texto": "Singapur, Malasia, Komodo, Gili y Bali en 18 días. Comentá INFO y te mando el itinerario. #indonesia #viajesengrupo",
   "portada_ms": 1500
  },
  {
-  "id": "tan_toggle",
-  "hora": "17:30",
-  "viaje": "Tanzania y Zanzíbar",
+  "id": "s9_tanzania",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_tanzania.mp4"
+ },
+ {
+  "id": "feed_egipto_v2",
+  "hora": "20:30",
   "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tan_toggle_m.mp4",
-  "texto": "Tarangire, Manyara, Ngorongoro y Serengeti, y después playa en Zanzíbar. Comentá INFO y te mando el itinerario. #safari #tanzania",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_egipto_v2.mp4",
+  "texto": "Video oficial · Egipto Total 🇪🇬\n\nPirámides, crucero por el Nilo, Abu Simbel y Luxor en 13 días, en grupo de 8 a 15 viajeros. Salida 18 de abril de 2027. Reservando antes del 30/11 pagás USD 100 menos.\n\nComentá INFO y te mando el itinerario.",
   "portada_ms": 1500
  },
  {
-  "id": "bal_relax",
-  "hora": "18:00",
-  "viaje": "Bali Relax",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_relax.mp4",
-  "texto": "¿Y si bajás un cambio en Bali? 15 días a ritmo lento por Bali y las islas Gili, en julio 2027. Preventa hasta el 30/11. Seguinos en @elgranviajecito 🌴 #bali #viajesengrupo",
-  "portada_ms": 1500
+  "id": "s9_peru",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_peru_prox.mp4"
  }
 ]

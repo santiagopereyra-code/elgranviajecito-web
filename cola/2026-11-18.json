@@ -1,0 +1,30 @@
+[
+ {
+  "id": "f_fil_empezo",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/fil_empezo.mp4",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos. Filipinas y Vietnam, febrero 2028. Comentá INFO y te mando el itinerario. #viajarsolo #filipinas",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s18_india",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_india_v3.mp4"
+ },
+ {
+  "id": "f_bal_angel",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_angel.mp4",
+  "texto": "Y es real. Tanah Lot y los atardeceres de Bali. Bali Relax, julio 2027. Comentá INFO y te mando el itinerario. #bali #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s18_grupo_bali",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_bali.mp4"
+ }
+]

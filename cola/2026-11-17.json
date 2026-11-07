@@ -1,0 +1,30 @@
+[
+ {
+  "id": "f_bal_relax",
+  "hora": "10:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_relax.mp4",
+  "texto": "¿Y si bajás un cambio en Bali? 15 días a ritmo lento por Bali y las islas Gili, en julio 2027. Preventa hasta el 30/11. Seguinos en @elgranviajecito 🌴 #bali #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s17_bali",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_bali_v2.mp4"
+ },
+ {
+  "id": "f_egi_nrain",
+  "hora": "20:30",
+  "tipo": "reel",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_nrain.mp4",
+  "texto": "Lo que se reserva en noviembre se vive en abril. Egipto Total, 13 días. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
+  "portada_ms": 1500
+ },
+ {
+  "id": "s17_carrasco",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_carrasco.mp4"
+ }
+]
