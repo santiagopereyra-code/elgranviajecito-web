@@ -871,3 +871,6 @@ body.dock-on .cw-fab{bottom:calc(108px + env(safe-area-inset-bottom,0px))}
 
 /* celulares: sellos sin mezcla (Safari en iPhone los dejaba invisibles) */
 @media (max-width:759px),(pointer:coarse){.stamp{mix-blend-mode:normal}}
+
+/* escritorio: sin sellos (no se veían); queda el texto de la sección */
+@media (min-width:760px) and (pointer:fine){.stamps{display:none}.stamps-g{grid-template-columns:1fr!important}.stamps-lede{max-width:none}}
