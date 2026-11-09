@@ -1,8 +1,9 @@
 {
  "f_ims_reservas": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18109480175211625",
+  "permalink": "https://www.instagram.com/reel/Dfhco1PlbCP/",
   "intentos": 1,
-  "hora_real": "10:30"
+  "hora_real": "10:33"
  }
 }
