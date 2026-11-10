@@ -1,0 +1,10 @@
+{
+  "dias": 120,
+  "min_outlier": 3,
+  "cuentas": [
+    "weroad_es", "weroad.es", "flashpack", "intrepidtravel", "gadventures", "contiki", "exoticca",
+    "viajeterapia.uk", "aliciacadenas", "staywild.travel", "packandgo_uk", "walkthaworld", "sttravelshop",
+    "atravelte.cl", "undyaviajando", "viajelowcost.es", "gemelosviajeros", "lamochiladesara", "renaud_blondin"
+  ],
+  "hashtags": ["viajesengrupo", "viajarsola", "viajeros", "tailandia", "bali", "egipto", "tanzania", "filipinas"]
+}
