@@ -1,0 +1,8 @@
+{
+ "f_fil_angel": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207077",
+  "intentos": 1,
+  "hora_real": "10:32"
+ }
+}
