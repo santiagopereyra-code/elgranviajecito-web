@@ -1,30 +1,14 @@
 [
- {
-  "id": "f_bal_roles",
-  "hora": "10:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_roles.mp4",
-  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Bali Relax, julio 2027. Comentá INFO y te mando el itinerario. #humorviajero #bali",
-  "portada_ms": 1500
- },
- {
-  "id": "s14_egipto",
-  "hora": "13:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_egipto_v2.mp4"
- },
- {
-  "id": "f_egi_vlog",
-  "hora": "20:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_vlog.mp4",
-  "texto": "Giza y Saqqara en Egipto Total, abril 2027. Comentá INFO y te mando el itinerario. #egipto #viajesengrupo",
-  "portada_ms": 1500
- },
- {
-  "id": "s14_peru",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_peru_prox.mp4"
- }
+  {
+    "id": "s14_egipto",
+    "hora": "13:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_egipto_v2.mp4"
+  },
+  {
+    "id": "s14_peru",
+    "hora": "21:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_peru_prox.mp4"
+  }
 ]

@@ -1,30 +1,14 @@
 [
- {
-  "id": "f_bal_vlog",
-  "hora": "10:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/bal_vlog.mp4",
-  "texto": "Así es Bali Relax: arrozales, templos, cascadas y Tanah Lot. Julio 2027. Comentá INFO y te mando el itinerario. #bali #viajesengrupo",
-  "portada_ms": 1500
- },
- {
-  "id": "s11_tailandia",
-  "hora": "13:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_tailandia_v2.mp4"
- },
- {
-  "id": "f_egi_roles",
-  "hora": "20:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/egi_roles.mp4",
-  "texto": "¿Cuál sos vos? Etiquetá a tu grupo. Egipto Total, abril 2027. Comentá INFO y te mando el itinerario. #humorviajero #egipto",
-  "portada_ms": 1500
- },
- {
-  "id": "s11_testi2",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi2.mp4"
- }
+  {
+    "id": "s11_tailandia",
+    "hora": "13:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_tailandia_v2.mp4"
+  },
+  {
+    "id": "s11_testi2",
+    "hora": "21:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi2.mp4"
+  }
 ]

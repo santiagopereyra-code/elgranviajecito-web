@@ -1,30 +1,14 @@
 [
- {
-  "id": "f_tai_pelicula",
-  "hora": "10:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_pelicula.mp4",
-  "texto": "Tailandia y Camboya, octubre 2027. Comentá INFO y te mando el itinerario. #tailandia #viajesengrupo",
-  "portada_ms": 1500
- },
- {
-  "id": "s15_japon",
-  "hora": "13:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_japon_v2.mp4"
- },
- {
-  "id": "f_ims_pelicula",
-  "hora": "20:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/ims_pelicula.mp4",
-  "texto": "Indonesia, Malasia y Singapur, junio 2027. Comentá INFO y te mando el itinerario. #indonesia #singapur",
-  "portada_ms": 1500
- },
- {
-  "id": "s15_china",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_china_prox.mp4"
- }
+  {
+    "id": "s15_japon",
+    "hora": "13:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_japon_v2.mp4"
+  },
+  {
+    "id": "s15_china",
+    "hora": "21:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_china_prox.mp4"
+  }
 ]

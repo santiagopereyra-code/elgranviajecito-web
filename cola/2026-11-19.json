@@ -1,30 +1,14 @@
 [
- {
-  "id": "f_tai_reservas",
-  "hora": "10:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/tai_reservas.mp4",
-  "texto": "Tailandia y Camboya, 16 días en octubre 2027. Comentá INFO y te mando el itinerario. #tailandia #camboya",
-  "portada_ms": 1500
- },
- {
-  "id": "s19_testi3c",
-  "hora": "13:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi3c.mp4"
- },
- {
-  "id": "f_peru_prox",
-  "hora": "20:30",
-  "tipo": "reel",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/st_peru_prox.mp4",
-  "texto": "Perú Andino, próximamente 🇵🇪\n\nMachu Picchu, Cusco, el Valle Sagrado y el lago Titicaca, en grupo de 8 a 15 viajeros. Todavía no abrimos reservas: preinscribite en elgranviajecito.com y te avisamos primero.\n\nComentá INFO y te mandamos el link.",
-  "portada_ms": 1500
- },
- {
-  "id": "s19_amiga",
-  "hora": "21:00",
-  "tipo": "historia",
-  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_amiga_tailandia.mp4"
- }
+  {
+    "id": "s19_testi3c",
+    "hora": "13:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_testi3c.mp4"
+  },
+  {
+    "id": "s19_amiga",
+    "hora": "21:00",
+    "tipo": "historia",
+    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_amiga_tailandia.mp4"
+  }
 ]
