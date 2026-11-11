@@ -33,7 +33,7 @@ Puntuá cada toma de 1 a 5 en estos cinco puntos. **Entra solo con promedio 4 o 
 **Descarte automático, sin importar el puntaje:**
 - Playa o mar con cielo nublado o agua turbia o marrón. En Maldivas, solo agua turquesa o animales marinos.
 - Gente arriba de elefantes, o andando en camello.
-- Fotos o videos de Santiago o de su ex pareja.
+- Tomas de Santiago con su ex pareja (Santiago solo o con el grupo sí puede aparecer, desde el 11/11).
 - Nusa Penida.
 - La bandera vieja de la marca. Solo va la nueva, lima y magenta.
 - Tomas bloqueadas en `claude/REELS-destinos.md` (indonesia_27, singapur_01, komodo/IMG_8523, etc.).
@@ -75,6 +75,20 @@ Puntuá cada toma de 1 a 5 en estos cinco puntos. **Entra solo con promedio 4 o 
 5. **"¿Cuánto cuesta 16 días por…?"** con el precio al final.
 6. **Testimonios "Lo cuentan ellos"**: nuestro mejor reel (1.562 cuentas, 48 % de salteo).
 7. **Carrusel de adivinar el destino**: nuestro mejor carrusel (2.835 vistas).
+
+8. **"Esto no es el Caribe. Es Zanzíbar."** (Intrepid, 17x).
+9. **"No es IA. Es real."** + "Mandáselo a con quién irías" (La mochila de Sara, 12x).
+10. **"5 lugares. 13 días. Una sola decisión."** (ST Travel Shop, 23x).
+11. **"Imaginate en … en 2027"** (ST Travel Shop, 15x).
+12. **"Se llama X y es justo lo que parece"** + dato (WeRoad).
+13. **"Salimos el … No digas más: me voy."** (versión de "Say less, I'm gone", 16x).
+14. **"¿Es esto un adiós…?"** con el grupo el último día (Contiki, 29x).
+15. **Top 5 lugares que tenés que ver en …** y reels de un solo lugar con el chip **"Parte de nuestro viajecito …"**.
+16. **Testimonio con voz real** ("Lo cuentan ellos") sobre tomas del mismo viaje que cuenta la persona. Nunca voz de IA.
+
+**Zona segura del texto:** gancho arriba (a unos 300 px del borde superior), textos secundarios a mitad de pantalla y chips por encima de los 1.400 px: lo de más abajo lo tapa la interfaz de Instagram.
+
+**Mezcla diaria:** de los 18, al menos 5 mezclan viajes (placa "Viajecitos 2027").
 
 **No repetir lo que no funcionó**: reels cortos de solo texto sobre una toma ("Recarga completa", "Activada hasta el 30/11"), que no pasaron de 50 cuentas.
 
