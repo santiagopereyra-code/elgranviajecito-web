@@ -1,8 +1,9 @@
 {
  "s14_egipto": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18100627319399964",
+  "permalink": "https://www.instagram.com/stories/elgranviajecito/4030325383806765151",
   "intentos": 1,
-  "hora_real": "13:01"
+  "hora_real": "13:04"
  }
 }
