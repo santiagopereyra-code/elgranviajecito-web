@@ -2,7 +2,7 @@
  "s16_grupo_egi": {
   "ok": false,
   "error": "video: Error: Media upload has failed with error code 2207077",
-  "intentos": 1,
-  "hora_real": "13:00"
+  "intentos": 2,
+  "hora_real": "13:03"
  }
 }
