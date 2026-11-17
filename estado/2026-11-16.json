@@ -4,5 +4,12 @@
   "error": "video: Error: Media upload has failed with error code 2207076",
   "intentos": 3,
   "hora_real": "13:05"
+ },
+ "s16_vas_sola": {
+  "ok": true,
+  "media_id": "18019739957967149",
+  "permalink": "https://www.instagram.com/stories/elgranviajecito/4032015257530711519",
+  "intentos": 0,
+  "hora_real": "21:02"
  }
 }
