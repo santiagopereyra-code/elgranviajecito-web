@@ -1,14 +1,94 @@
 [
-  {
-    "id": "s18_india",
-    "hora": "13:00",
-    "tipo": "historia",
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_india_v3.mp4"
-  },
-  {
-    "id": "s18_grupo_bali",
-    "hora": "21:00",
-    "tipo": "historia",
-    "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_bali.mp4"
-  }
+ {
+  "id": "s18_india",
+  "hora": "13:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/feed_india_v3.mp4"
+ },
+ {
+  "id": "p_h00_tan_grupo",
+  "hora": "13:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/h00_tan_grupo.mp4",
+  "texto": "¿Cuál sos vos? Etiquetá a tu grupo 😂\n\nTanzania y Zanzíbar · 13 días · salida 25/09/2027.\nReservando antes del 30/11: USD 3.490 + aéreo (después USD 3.590). Link en la bio.\n\n#tanzania #zanzibar #safari #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_h01_ims_nadie",
+  "hora": "14:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/h01_ims_nadie.mp4",
+  "texto": "¿A alguien más le pasa? 😅\n\nIndonesia, Malasia y Singapur · 18 días · salida 03/06/2027.\nReservando antes del 30/11: USD 2.890 + aéreo (después USD 2.990). Link en la bio.\n\n#indonesia #bali #singapur #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1118_bal_pov",
+  "hora": "15:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1118_bal_pov.mp4",
+  "texto": "Llegás sin conocer a nadie y te volvés con amigos.\n\nBali Relax · 15 días · salida 10/07/2027.\nReservando antes del 30/11: USD 2.190 + aéreo (después USD 2.290). Link en la bio.\n\n#bali #ubud #gili #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1117_tan_lugar",
+  "hora": "16:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1117_tan_lugar.mp4",
+  "texto": "Guardalo para tu próximo viaje.\n\nTanzania y Zanzíbar · 13 días · salida 25/09/2027.\nReservando antes del 30/11: USD 3.490 + aéreo (después USD 3.590). Link en la bio.\n\n#tanzania #zanzibar #safari #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1115_bal_noes",
+  "hora": "17:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1115_bal_noes.mp4",
+  "texto": "Guardalo para tu 2027.\n\nBali Relax · 15 días · salida 10/07/2027.\nReservando antes del 30/11: USD 2.190 + aéreo (después USD 2.290). Link en la bio.\n\n#bali #ubud #gili #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1117_ims_decision",
+  "hora": "18:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1117_ims_decision.mp4",
+  "texto": "Una sola decisión. Guardalo.\n\nIndonesia, Malasia y Singapur · 18 días · salida 03/06/2027.\nReservando antes del 30/11: USD 2.890 + aéreo (después USD 2.990). Link en la bio.\n\n#indonesia #bali #singapur #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1119_bal_top5",
+  "hora": "19:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1119_bal_top5.mp4",
+  "texto": "Guardalo: los 5 lugares que no te podés perder.\n\nBali Relax · 15 días · salida 10/07/2027.\nReservando antes del 30/11: USD 2.190 + aéreo (después USD 2.290). Link en la bio.\n\n#bali #ubud #gili #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1114_tan_cuanto",
+  "hora": "20:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1114_tan_cuanto.mp4",
+  "texto": "Guardalo para cuando armes tu 2027.\n\nTanzania y Zanzíbar · 13 días · salida 25/09/2027.\nReservando antes del 30/11: USD 3.490 + aéreo (después USD 3.590). Link en la bio.\n\n#tanzania #zanzibar #safari #viajesengrupo #viajarsola #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "s18_grupo_bali",
+  "hora": "21:00",
+  "tipo": "historia",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/wa_grupo_bali.mp4"
+ },
+ {
+  "id": "p_1119_mix_cosas",
+  "hora": "21:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1119_mix_cosas.mp4",
+  "texto": "Viajecitos 2027 en grupo de 8 a 15 viajeros: Tailandia, Tanzania, Indonesia, Bali, Egipto, Japón, Filipinas, Sri Lanka, India y Perú.\n\nReservando antes del 30/11 pagás USD 100 menos en todos los viajes (+ aéreo). Link en la bio.\n\n#viajesengrupo #viajarsola #viajarsolo #elgranviajecito",
+  "portada_ms": 1200
+ },
+ {
+  "id": "p_1116_mix_elegi",
+  "hora": "22:30",
+  "tipo": "reel_prueba",
+  "video": "https://cdn.jsdelivr.net/gh/santiagopereyra-code/elgranviajecito-web@publicador/cola/v/p/1116_mix_elegi.mp4",
+  "texto": "Viajecitos 2027 en grupo de 8 a 15 viajeros: Tailandia, Tanzania, Indonesia, Bali, Egipto, Japón, Filipinas, Sri Lanka, India y Perú.\n\nReservando antes del 30/11 pagás USD 100 menos en todos los viajes (+ aéreo). Link en la bio.\n\n#viajesengrupo #viajarsola #viajarsolo #elgranviajecito",
+  "portada_ms": 1200
+ }
 ]
