@@ -7,9 +7,10 @@
   "hora_real": "13:03"
  },
  "p_h00_tan_grupo": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18487951150115122",
+  "permalink": "https://www.instagram.com/reel/Df48iVwgPCn/",
   "intentos": 1,
-  "hora_real": "13:31"
+  "hora_real": "13:34"
  }
 }
