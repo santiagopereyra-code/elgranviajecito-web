@@ -21,9 +21,10 @@
   "hora_real": "14:34"
  },
  "p_1118_bal_pov": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18358880890222808",
+  "permalink": "https://www.instagram.com/reel/Df5KFrgE9Mk/",
   "intentos": 1,
-  "hora_real": "15:30"
+  "hora_real": "15:33"
  }
 }
