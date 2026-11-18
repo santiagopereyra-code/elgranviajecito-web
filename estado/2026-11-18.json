@@ -5,5 +5,11 @@
   "permalink": "https://www.instagram.com/stories/elgranviajecito/4033223773910474479",
   "intentos": 1,
   "hora_real": "13:03"
+ },
+ "p_h00_tan_grupo": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207077",
+  "intentos": 1,
+  "hora_real": "13:31"
  }
 }
