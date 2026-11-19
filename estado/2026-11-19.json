@@ -14,9 +14,10 @@
   "hora_real": "10:02"
  },
  "p_1116_tan_adios": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207077",
+  "ok": true,
+  "media_id": "18081521090427779",
+  "permalink": "https://www.instagram.com/reel/Df7MkOqnF7q/",
   "intentos": 1,
-  "hora_real": "10:30"
+  "hora_real": "10:33"
  }
 }
