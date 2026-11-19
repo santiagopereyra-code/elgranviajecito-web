@@ -12,5 +12,11 @@
   "permalink": "https://www.instagram.com/reel/Df7JAtCD6vA/",
   "intentos": 0,
   "hora_real": "10:02"
+ },
+ "p_1116_tan_adios": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207077",
+  "intentos": 1,
+  "hora_real": "10:30"
  }
 }
