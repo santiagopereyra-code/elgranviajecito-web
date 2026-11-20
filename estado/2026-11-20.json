@@ -48,9 +48,10 @@
   "hora_real": "19:31"
  },
  "p_1116_tan_decision": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207076",
+  "ok": true,
+  "media_id": "18117172760466984",
+  "permalink": "https://www.instagram.com/reel/Df-yu98jcl-/",
   "intentos": 1,
-  "hora_real": "20:02"
+  "hora_real": "20:04"
  }
 }
