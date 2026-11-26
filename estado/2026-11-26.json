@@ -26,5 +26,11 @@
   "permalink": "https://www.instagram.com/reel/DgNRcTrC9hl/",
   "intentos": 0,
   "hora_real": "11:02"
+ },
+ "p_1115_tai_sellama": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "11:30"
  }
 }
