@@ -46,5 +46,11 @@
   "permalink": "https://www.instagram.com/reel/DgQwi50iMuM/",
   "intentos": 0,
   "hora_real": "19:31"
+ },
+ "p_1120_bal_decision": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "20:00"
  }
 }
