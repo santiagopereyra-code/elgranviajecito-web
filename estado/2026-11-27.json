@@ -22,7 +22,7 @@
  "p_1122_tai_lugar": {
   "ok": false,
   "error": "video: Error: Media upload has failed with error code 2207076",
-  "intentos": 1,
-  "hora_real": "11:01"
+  "intentos": 2,
+  "hora_real": "11:04"
  }
 }
