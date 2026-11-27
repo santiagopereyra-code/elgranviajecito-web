@@ -20,9 +20,10 @@
   "hora_real": "10:37"
  },
  "p_1122_tai_lugar": {
-  "ok": false,
-  "error": "video: Error: Media upload has failed with error code 2207076",
+  "ok": true,
+  "media_id": "18126880850019975",
+  "permalink": "https://www.instagram.com/reel/DgP27mjKGlT/",
   "intentos": 2,
-  "hora_real": "11:04"
+  "hora_real": "11:08"
  }
 }
