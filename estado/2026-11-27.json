@@ -64,7 +64,7 @@
  "p_1121_tan_dia1": {
   "ok": false,
   "error": "video: Error: Media upload has failed with error code 2207076",
-  "intentos": 2,
-  "hora_real": "21:04"
+  "intentos": 3,
+  "hora_real": "21:06"
  }
 }
