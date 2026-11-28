@@ -60,5 +60,11 @@
   "permalink": "https://www.instagram.com/reel/DgQ3Y5jsHdf/",
   "intentos": 0,
   "hora_real": "20:31"
+ },
+ "p_1121_tan_dia1": {
+  "ok": false,
+  "error": "video: Error: Media upload has failed with error code 2207076",
+  "intentos": 1,
+  "hora_real": "21:02"
  }
 }
